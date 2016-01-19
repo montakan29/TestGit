@@ -1,47 +1,87 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+Service/SystemTestService/bin/Release/Newtonsoft.Json.xml
+Service/SystemTestService/bin/Release/SystemTestService.exe.config
+Service/SystemTestService/bin/Release/SystemTestService.vshost.exe.config
+Service/SystemTestService/bin/Release/SystemTestService.vshost.exe.manifest
+Service/SystemTestService/bin/Release/testFTP.txt
+Service/SystemTestService/bin/Release/winscp/WinSCP.com
+Service/SystemTestService/bin/Release/winscp/license-dotnet.txt
+Service/SystemTestService/bin/Release/winscp/license.txt
+Service/SystemTestService/bin/Release/winscp/readme.txt
+Service/SystemTestService/bin/Release/winscp/readme_automation.txt
+Service/SystemTestService/obj/Release/SystemTestService.csproj.FileListAbsolute.txt
+Service/SystemTestService/obj/Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+Service/SystemTestService/obj/Release/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+Service/SystemTestService/obj/Release/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+Service/SystemTestServiceTest/bin/Debug/Newtonsoft.Json.xml
+Service/SystemTestServiceTest/bin/Debug/testFTP.txt
+Service/SystemTestServiceTest/bin/Debug/winscp/WinSCP.com
+Service/SystemTestServiceTest/bin/Debug/winscp/license-dotnet.txt
+Service/SystemTestServiceTest/bin/Debug/winscp/license.txt
+Service/SystemTestServiceTest/bin/Debug/winscp/readme.txt
+Service/SystemTestServiceTest/bin/Debug/winscp/readme_automation.txt
+Service/SystemTestServiceTest/bin/Release/Newtonsoft.Json.xml
+Service/SystemTestServiceTest/bin/Release/testFTP.txt
+Service/SystemTestServiceTest/bin/Release/winscp/WinSCP.com
+Service/SystemTestServiceTest/bin/Release/winscp/license-dotnet.txt
+Service/SystemTestServiceTest/bin/Release/winscp/license.txt
+Service/SystemTestServiceTest/bin/Release/winscp/readme.txt
+Service/SystemTestServiceTest/bin/Release/winscp/readme_automation.txt
+Service/SystemTestServiceTest/obj/Debug/SystemTestServiceTest.csproj.FileListAbsolute.txt
+Service/SystemTestServiceTest/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+Service/SystemTestServiceTest/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+Service/SystemTestServiceTest/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+Service/SystemTestServiceTest/obj/Release/SystemTestServiceTest.csproj.FileListAbsolute.txt
+Service/SystemTestServiceTest/obj/Release/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+Service/SystemTestServiceTest/obj/Release/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+Service/SystemTestServiceTest/obj/Release/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+Service/packages/Newtonsoft.Json.6.0.8/Newtonsoft.Json.6.0.8.nupkg
+Service/packages/Newtonsoft.Json.6.0.8/lib/net20/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/net35/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/net40/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/net45/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/netcore45/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml
+Service/packages/Newtonsoft.Json.6.0.8/tools/install.ps1
+App/STTest/obj/Release/STTest.csproj.FileListAbsolute.txt
+App/packages/FluentAssertions.4.0.1/lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.XML
+App/packages/FluentAssertions.4.0.1/lib/portable-win81+wpa81/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/portable-win81+wpa81/FluentAssertions.pri
+App/packages/FluentAssertions.4.0.1/lib/portable-win81+wpa81/FluentAssertions.xml
+App/packages/FluentAssertions.4.0.1/lib/sl5/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/sl5/FluentAssertions.xml
+App/packages/FluentAssertions.4.0.1/lib/sl5/Microsoft.CSharp.xml
+App/packages/FluentAssertions.4.0.1/lib/sl5/Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.xml
+App/packages/FluentAssertions.4.0.1/lib/sl5/System.Xml.Linq.xml
+App/packages/FluentAssertions.4.0.1/lib/wp8/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/wp8/FluentAssertions.xml
+App/packages/FluentAssertions.4.0.1/lib/xamarin.ios/FluentAssertions.Core.xml
+App/packages/NUnit.2.6.0.12054/NUnit.2.6.0.12054.nupkg
+App/packages/NUnit.2.6.0.12054/lib/nunit.framework.xml
+App/packages/NUnit.2.6.0.12054/license.txt
+App/packages/SpecFlow.1.9.0/LICENSE.txt
+App/packages/SpecFlow.1.9.0/SpecFlow.1.9.0.nupkg
+App/packages/SpecFlow.1.9.0/changelog.txt
+App/packages/SpecFlow.1.9.0/content/App.config.transform
+App/packages/SpecFlow.1.9.0/tools/TechTalk.SpecFlow.targets
+App/packages/SpecFlow.1.9.0/tools/TechTalk.SpecFlow.tasks
+App/packages/SpecFlow.NUnit.1.1.1/SpecFlow.NUnit.1.1.1.nupkg
+App/packages/FluentAssertions.4.0.1/lib/dotnet/FluentAssertions.xml
+App/SystemTestApp/obj/Release/SystemTestApp.csproj.FileListAbsolute.txt
+App/SystemTestApp/obj/Release/build.force
+App/packages/FluentAssertions.4.0.1/FluentAssertions.4.0.1.nupkg
+App/packages/SpecFlow.NUnit.1.1.1/content/App.config.transform
+App/packages/FluentAssertions.4.0.1/lib/monotouch/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/net40/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/net40/FluentAssertions.xml
+App/packages/FluentAssertions.4.0.1/lib/net45/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/net45/FluentAssertions.xml
+App/packages/FluentAssertions.4.0.1/lib/portable-monotouch+monoandroid+xamarin.ios/FluentAssertions.Core.xml
+App/packages/FluentAssertions.4.0.1/lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.xml
+App/STTest/obj/
+App/SystemTestApp/obj/
+App/packages/FluentAssertions.4.0.1/lib/monoandroid/FluentAssertions.Core.xml
+Service/SystemTestService/bin/
+App/STOpsConsole/bin/
+App/STOpsConsole/obj/
+App/packages/
