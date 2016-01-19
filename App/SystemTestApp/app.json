@@ -1,0 +1,8 @@
+﻿{
+	"name": "SystemTest",
+	"displayName": "SystemTest",
+	"version" : "0.0.56",
+	"description" : "SystemTestApp DotNet app",
+	"defaultPlatform" : "DotNet",
+	"defaultPage" : ""
+}

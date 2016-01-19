@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ContextInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="environment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContextInfo" nillable="true" type="tns:ContextInfo" />
+</xs:schema>

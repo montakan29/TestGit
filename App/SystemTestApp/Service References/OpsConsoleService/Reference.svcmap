@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62ff98a9-21b7-4303-96c3-8f196a50559e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8989/OpsConsoleService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="3c10eaa8-79f0-4912-a4ae-21ada82c89cd" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="49c4dc5c-4654-401e-9cf6-60a849726499" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="10b72ba6-54fb-49c3-87e8-7479ecad207e" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="Entities.xsd" MetadataType="Schema" ID="a43f4f42-6532-44fa-943d-4c5853a7b265" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="7ff8d964-4c0f-43a3-9304-a62105251be0" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="b2e67e7e-3de6-47ba-aa61-4c43f2b85b4c" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+    <MetadataFile FileName="Entities.PerfConsole.xsd" MetadataType="Schema" ID="e70bfe2c-6574-4a76-9f40-858b2fbf1ca8" SourceId="1" SourceUrl="http://localhost:8989/OpsConsoleService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

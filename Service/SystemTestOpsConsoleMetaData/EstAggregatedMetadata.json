@@ -1,0 +1,76 @@
+{
+  "metadata": [
+    {
+      "criticalLo": 2,
+      "enable": true,
+      "product": "est",
+      "statCode": "3",
+      "valueUsing": "avg",
+      "warningLo": 4
+    },
+    {
+      "criticalHi": 0.01,
+      "enable": true,
+      "product": "est",
+      "statCode": "135",
+      "valueUsing": "avg",
+      "warningHi": 0.01
+    },
+    {
+      "criticalLo": 1000000000,
+      "enable": true,
+      "product": "est",
+      "statCode": "39",
+      "valueUsing": "avg",
+      "warningLo": 1000000000
+    },
+    {
+      "criticalLo": 0.99,
+      "enable": true,
+      "product": "est",
+      "statCode": "88",
+      "valueUsing": "avg",
+      "warningLo": 0.99
+    },
+    {
+      "criticalLo": 250000,
+      "enable": true,
+      "product": "est",
+      "statCode": "124",
+      "valueUsing": "avg",
+      "warningLo": 250000
+    },
+    {
+      "criticalLo": 3.99,
+      "enable": true,
+      "product": "est",
+      "statCode": "4",
+      "valueUsing": "avg",
+      "warningLo": 4
+    },
+    {
+      "criticalLo": 0.3,
+      "enable": true,
+      "product": "est",
+      "statCode": "92",
+      "valueUsing": "avg",
+      "warningLo": 0.5
+    },
+    {
+      "criticalLo": 0.99,
+      "enable": true,
+      "product": "est",
+      "statCode": "97",
+      "valueUsing": "avg",
+      "warningLo": 0.99
+    },
+    {
+      "criticalHi": 8000,
+      "enable": true,
+      "product": "est",
+      "statCode": "112",
+      "valueUsing": "avg",
+      "warningHi": 4000
+    }
+  ]
+}

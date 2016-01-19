@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34ce20b5-3262-432e-8ff7-fc58640d745c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8989/DataCollectorService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="955007fc-ae61-46f3-b571-b63d5c0daa8d" SourceId="1" SourceUrl="http://localhost:8989/PlatformUsageDataCollector/mex?xsd=xsd2" />
+    <MetadataFile FileName="DataCollectorService.wsdl" MetadataType="Wsdl" ID="610f8760-0e5d-420b-aa3c-8fcb7ca30b80" SourceId="1" SourceUrl="http://localhost:8989/PlatformUsageDataCollector/mex?wsdl" />
+    <MetadataFile FileName="mex.disco" MetadataType="Disco" ID="d7cf87ca-3b43-49cd-ae58-d561f7f69110" SourceId="1" SourceUrl="http://localhost:8989/PlatformUsageDataCollector/mex?disco" />
+    <MetadataFile FileName="mex1.xsd" MetadataType="Schema" ID="6aa174a0-14a3-453a-a1b6-11a2ba726c55" SourceId="1" SourceUrl="http://localhost:8989/PlatformUsageDataCollector/mex?xsd=xsd1" />
+    <MetadataFile FileName="mex2.xsd" MetadataType="Schema" ID="ba121ab9-e307-4624-9a4f-0744046a437d" SourceId="1" SourceUrl="http://localhost:8989/PlatformUsageDataCollector/mex?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

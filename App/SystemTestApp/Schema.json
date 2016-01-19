@@ -1,0 +1,2461 @@
+{
+    "lastupdated": "2016-01-15T00:00",
+    "testschema": [
+        {
+            "name": "1",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "CPU Type",
+            "usedesc": true
+        },
+        {
+            "name": "10",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Service Pack",
+            "usedesc": true
+        },
+        {
+            "name": "1001",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Gateway Service",
+            "usedesc": true
+        },
+        {
+            "name": "1003",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Search and Navigation Services",
+            "usedesc": true
+        },
+        {
+            "name": "1004",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Visual Basic for Applications - Microsoft Excel compatible",
+            "usedesc": false
+        },
+        {
+            "name": "11",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Browser Version",
+            "usedesc": true
+        },
+        {
+            "name": "110",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Visual Basic for Applications Version",
+            "usedesc": false
+        },
+        {
+            "name": "111",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "IDN Permission Uploader",
+            "usedesc": false
+        },
+        {
+            "name": "112",
+            "enabled": "True",
+            "type": "int",
+            "unit": "ms",
+            "desc": "Average Latency (One Way)",
+            "usedesc": true
+        },
+        {
+            "name": "120",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Platform Name",
+            "usedesc": false
+        },
+        {
+            "name": "121",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "HTTPS Connection Check",
+            "usedesc": false
+        },
+        {
+            "name": "122",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "User Country",
+            "usedesc": false
+        },
+        {
+            "name": "124",
+            "enabled": "True",
+            "type": "float",
+            "unit": "GB",
+            "desc": "Temporary Internet Files folder size",
+            "usedesc": true
+        },
+        {
+            "name": "125",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Internet Availability Test",
+            "usedesc": true
+        },
+        {
+            "name": "128",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Product Version",
+            "usedesc": false
+        },
+        {
+            "name": "129",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Machine ID",
+            "usedesc": false
+        },
+        {
+            "name": "130",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Product MSI Version",
+            "usedesc": false
+        },
+        {
+            "name": "133",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "IE LAN Settings Status",
+            "usedesc": false
+        },
+        {
+            "name": "134",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "WMI Service",
+            "usedesc": true
+        },
+        {
+            "name": "135",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Delete Browsing History on Exit",
+            "usedesc": false
+        },
+        {
+            "name": "136",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Microsoft Word Version",
+            "usedesc": true
+        },
+        {
+            "name": "137",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Microsoft PowerPoint Version",
+            "usedesc": true
+        },
+        {
+            "name": "138",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Microsoft Office",
+            "usedesc": true
+        },
+        {
+            "name": "140",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "System Test Process Information",
+            "usedesc": false
+        },
+        {
+            "name": "141",
+            "enabled": "True",
+            "type": "int",
+            "unit": "screen(s)",
+            "desc": "Screens",
+            "usedesc": false
+        },
+        {
+            "name": "142.1",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen1 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.2",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen2 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.3",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen3 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.4",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen4 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.5",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen5 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.6",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen6 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.7",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen7 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.8",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen8 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.9",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen9 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.10",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen1 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.11",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen1 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.12",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen2 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.13",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen3 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.14",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen4 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.15",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen5 Details",
+            "usedesc": false
+        },
+        {
+            "name": "142.16",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen6 Details",
+            "usedesc": false
+        },
+        {
+            "name": "143",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Register Product",
+            "usedesc": true
+        },
+        {
+            "name": "144",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Microsoft Hotfix for Eikon Office",
+            "usedesc": false
+        },
+        {
+            "name": "145",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Secure Protocol",
+            "usedesc": false
+        },
+        {
+            "name": "162",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Secure Protocol",
+            "usedesc": false
+        },
+        {
+            "name": "1005",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Secure Protocol",
+            "usedesc": false
+        },
+        {
+            "name": "16",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Thomson Reuters Drive Service",
+            "usedesc": false
+        },
+        {
+            "name": "17",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": ".NET Framework Version",
+            "usedesc": false
+        },
+        {
+            "name": "18",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "HTTP 1.1 Service Availability",
+            "usedesc": false
+        },
+        {
+            "name": "19",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSXML 6.0 Version",
+            "usedesc": true
+        },
+        {
+            "name": "2",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "CPU Vendor",
+            "usedesc": true
+        },
+        {
+            "name": "21",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Operating System Language",
+            "usedesc": true
+        },
+        {
+            "name": "22",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Windows User Account Name",
+            "usedesc": false
+        },
+        {
+            "name": "23",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "User Locale",
+            "usedesc": false
+        },
+        {
+            "name": "24",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Computer Name",
+            "usedesc": false
+        },
+        {
+            "name": "25",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Computer Domain",
+            "usedesc": false
+        },
+        {
+            "name": "26",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "User Rights",
+            "usedesc": false
+        },
+        {
+            "name": "27",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "User Time Zone",
+            "usedesc": false
+        },
+        {
+            "name": "28",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Thin Client Run Mode",
+            "usedesc": false
+        },
+        {
+            "name": "29",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Microsoft Office Language",
+            "usedesc": true
+        },
+        {
+            "name": "3",
+            "enabled": "True",
+            "type": "float",
+            "unit": "GHz",
+            "desc": "CPU Speed",
+            "usedesc": true
+        },
+        {
+            "name": "31",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Views Service",
+            "usedesc": true
+        },
+        {
+            "name": "36",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Microsoft Excel Version",
+            "usedesc": true
+        },
+        {
+            "name": "37",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Browser JavaScript",
+            "usedesc": true
+        },
+        {
+            "name": "39",
+            "enabled": "True",
+            "type": "float",
+            "unit": "MB",
+            "desc": "Free Disk Space",
+            "usedesc": true
+        },
+        {
+            "name": "4",
+            "enabled": "True",
+            "type": "int",
+            "unit": "MB",
+            "desc": "Installed Memory",
+            "usedesc": true
+        },
+        {
+            "name": "40",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Streaming Availability",
+            "usedesc": false
+        },
+        {
+            "name": "42",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "News Headlines Streaming",
+            "usedesc": true
+        },
+        {
+            "name": "48",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "CPU Description",
+            "usedesc": true
+        },
+        {
+            "name": "49",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Installation Path",
+            "usedesc": false
+        },
+        {
+            "name": "5",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Screen Resolution",
+            "usedesc": true
+        },
+        {
+            "name": "50",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Data Retrieval",
+            "usedesc": false
+        },
+        {
+            "name": "59",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Time Series Snapshot Availability",
+            "usedesc": true
+        },
+        {
+            "name": "6",
+            "enabled": "True",
+            "type": "int",
+            "unit": "bit",
+            "desc": "Color Depth",
+            "usedesc": true
+        },
+        {
+            "name": "60",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Time Series Streaming Availability",
+            "usedesc": false
+        },
+        {
+            "name": "61",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "User ID",
+            "usedesc": false
+        },
+        {
+            "name": "62",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Product Name",
+            "usedesc": false
+        },
+        {
+            "name": "63",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "OMM Session",
+            "usedesc": false
+        },
+        {
+            "name": "65",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "DACS User Name",
+            "usedesc": false
+        },
+        {
+            "name": "66",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "DACS Position",
+            "usedesc": false
+        },
+        {
+            "name": "7",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSI Version",
+            "usedesc": true
+        },
+        {
+            "name": "73",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Local Time",
+            "usedesc": false
+        },
+        {
+            "name": "77",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Market Feed Session",
+            "usedesc": true
+        },
+        {
+            "name": "78",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Legacy Thomson Reuters Products",
+            "usedesc": true
+        },
+        {
+            "name": "8",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSXML 3.0 Version",
+            "usedesc": true
+        },
+        {
+            "name": "86",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Saving Encrypted Pages to Disk",
+            "usedesc": true
+        },
+        {
+            "name": "87",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "HTTP 1.1",
+            "usedesc": false
+        },
+        {
+            "name": "88",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "HTTP 1.1 Through Proxy Connections",
+            "usedesc": false
+        },
+        {
+            "name": "9",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Operating System",
+            "usedesc": true
+        },
+        {
+            "name": "92",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Platform Connection Check",
+            "usedesc": true
+        },
+        {
+            "name": "93",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Current Real-time Deployment Model",
+            "usedesc": false
+        },
+        {
+            "name": "94",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Current Real-time Network",
+            "usedesc": false
+        },
+        {
+            "name": "95",
+            "enabled": "True",
+            "type": "float",
+            "unit": "kbps",
+            "desc": "Download Bandwidth",
+            "usedesc": true
+        },
+        {
+            "name": "96",
+            "enabled": "True",
+            "type": "float",
+            "unit": "kbps",
+            "desc": "Upload Bandwidth",
+            "usedesc": true
+        },
+        {
+            "name": "97",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Secondary Platform Connection Check",
+            "usedesc": true
+        },
+        {
+            "name": "123",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Proxy Connection Check",
+            "usedesc": false
+        },
+        {
+            "name": "126",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Reuters Insider",
+            "usedesc": true
+        },
+        {
+            "name": "127ADF",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Adfin Add-On",
+            "usedesc": false
+        },
+        {
+            "name": "127EDM",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon Deployment Manager",
+            "usedesc": false
+        },
+        {
+            "name": "127EIKON",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Product Version (ID String)",
+            "usedesc": false
+        },
+        {
+            "name": "127HF",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Product Hotfix",
+            "usedesc": false
+        },
+        {
+            "name": "127INSL",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "InsertLink Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127LPja-JP",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Japanese Language Pack",
+            "usedesc": false
+        },
+        {
+            "name": "127LPzh-CN",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Chinese Language Pack",
+            "usedesc": false
+        },
+        {
+            "name": "127MODASIA",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Regional Model for Asia Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127NET",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": ".NET Framework Version (ID String)",
+            "usedesc": false
+        },
+        {
+            "name": "127SR",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon Service Patch",
+            "usedesc": false
+        },
+        {
+            "name": "127ST",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon System Test",
+            "usedesc": false
+        },
+        {
+            "name": "127UA",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Update Agent",
+            "usedesc": false
+        },
+        {
+            "name": "127MSPINS",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MetaStock Pro Institutional",
+            "usedesc": false
+        },
+        {
+            "name": "127MSPRET",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MetaStock Pro Retail",
+            "usedesc": false
+        },
+        {
+            "name": "127DT",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Display Template Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127DS",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Datastream Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127DFO",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "DFO Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127TRADING",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "TRADING Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127DS",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Datastream Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127MSSB",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MetaStock Symbols Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127PPP",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "PowerPlus Pro Legacy Functions",
+            "usedesc": false
+        },
+        {
+            "name": "127SYMB",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon Symbols",
+            "usedesc": false
+        },
+        {
+            "name": "127FQFC",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "FlexQuote and FlexChain",
+            "usedesc": false
+        },
+        {
+            "name": "127MS1",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSPRETXIII Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127MS2",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSPRETXIV Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127MS3",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSSBXIII Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127MS4",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "MSPINSXIV Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "127EEWM",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon EWM",
+            "usedesc": false
+        },
+        {
+            "name": "127AP",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "AP Add-on",
+            "usedesc": false
+        },
+        {
+            "name": "131",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Agent Latest Status",
+            "usedesc": false
+        },
+        {
+            "name": "132",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Site Connectivity Assessment",
+            "usedesc": true
+        },
+        {
+            "name": "32",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Update Service Agent",
+            "usedesc": true
+        },
+        {
+            "name": "35",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Agent State",
+            "usedesc": true
+        },
+        {
+            "name": "64",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Display Template Path",
+            "usedesc": false
+        },
+        {
+            "name": "67",
+            "enabled": "True",
+            "type": "int",
+            "unit": null,
+            "desc": "Desktop Scheduler Settings",
+            "usedesc": false
+        },
+        {
+            "name": "68",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Agent Check Time",
+            "usedesc": true
+        },
+        {
+            "name": "69",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Desktop Scheduler Last Check for Updates",
+            "usedesc": false
+        },
+        {
+            "name": "70",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Agent Last Check for Updates",
+            "usedesc": true
+        },
+        {
+            "name": "71",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Desktop Scheduler Setting for Updates",
+            "usedesc": false
+        },
+        {
+            "name": "72",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Update Agent Setting for Updates",
+            "usedesc": true
+        },
+        {
+            "name": "79",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Public API Installation Status",
+            "usedesc": true
+        },
+        {
+            "name": "81",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Transaction URLs",
+            "usedesc": true
+        },
+        {
+            "name": "82",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Transaction Add-On URLs",
+            "usedesc": true
+        },
+        {
+            "name": "83",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Transaction Add-On Version",
+            "usedesc": true
+        },
+        {
+            "name": "84",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Transaction Add-On JRE Version",
+            "usedesc": true
+        },
+        {
+            "name": "90",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Flash Plug-In Version",
+            "usedesc": false
+        },
+        {
+            "name": "99",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Silverlight Plugin Version",
+            "usedesc": true
+        },
+        {
+            "name": "300",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Access Point",
+            "usedesc": true
+        },
+        {
+            "name": "301",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Adobe Acrobat Version",
+            "usedesc": true
+        },
+        {
+            "name": "302",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Cookies Enabled",
+            "usedesc": true
+        },
+        {
+            "name": "303",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Flash Version",
+            "usedesc": true
+        },
+        {
+            "name": "304",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Java Enabled",
+            "usedesc": true
+        },
+        {
+            "name": "305",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Java Permissions",
+            "usedesc": true
+        },
+        {
+            "name": "306",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Java Version",
+            "usedesc": true
+        },
+        {
+            "name": "307",
+            "enabled": "True",
+            "type": "int",
+            "unit": "ms",
+            "desc": "News Content Response Time",
+            "usedesc": true
+        },
+        {
+            "name": "308",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Next-generation plug-in",
+            "usedesc": true
+        },
+        {
+            "name": "309",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Proxy Auto-Configuration",
+            "usedesc": true
+        },
+        {
+            "name": "310",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Proxy Server",
+            "usedesc": true
+        },
+        {
+            "name": "311",
+            "enabled": "True",
+            "type": "int",
+            "unit": "ms",
+            "desc": "Quote Content Response Time",
+            "usedesc": true
+        },
+        {
+            "name": "312",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Quote Streaming",
+            "usedesc": true
+        },
+        {
+            "name": "313",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Scripting of Java Applets",
+            "usedesc": true
+        },
+        {
+            "name": "314",
+            "enabled": "True",
+            "type": "float",
+            "unit": "MB",
+            "desc": "Virtual Memory",
+            "usedesc": true
+        },
+        {
+            "name": "315",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Proxy Override",
+            "usedesc": true
+        },
+        {
+            "name": "316",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Legacy User",
+            "usedesc": true
+        },
+        {
+            "name": "CMPNAME",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Computer Name",
+            "usedesc": false
+        },
+        {
+            "name": "runmode",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Eikon System Test Run Mode",
+            "usedesc": false
+        },
+        {
+            "name": "total",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Total",
+            "usedesc": false
+        },
+        {
+            "name": "pass",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Pass",
+            "usedesc": false
+        },
+        {
+            "name": "info",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Info",
+            "usedesc": false
+        },
+      {
+        "name": "warn",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.1",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.2",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.3",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.4",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.5",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.6",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.7",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+        "name": "warn.8",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Warning",
+        "usedesc": false
+      },
+      {
+            "name": "warn.9",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Warning",
+            "usedesc": false
+        },
+      {
+        "name": "alert",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.1",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.2",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.3",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.4",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.5",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.6",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.7",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+      {
+        "name": "alert.8",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Alert",
+        "usedesc": false
+      },
+       {
+            "name": "alert.9",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Alert",
+            "usedesc": false
+        },
+      {
+        "name": "fail",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.1",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.2",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.3",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.4",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.5",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.6",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.7",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+        "name": "fail.8",
+        "enabled": "True",
+        "type": "string",
+        "unit": null,
+        "desc": "Fail",
+        "usedesc": false
+      },
+      {
+            "name": "fail.9",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Fail",
+            "usedesc": false
+        },
+        {
+            "name": "other",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Other",
+            "usedesc": false
+        },
+        {
+            "name": "servname",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Server Name",
+            "usedesc": false
+        },
+        {
+            "name": "envname",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Environment Name",
+            "usedesc": false
+        },
+        {
+            "name": "oldid",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Old Test ID",
+            "usedesc": false
+        },
+        {
+            "name": "isewm",
+            "enabled": "True",
+            "type": "boolean",
+            "unit": null,
+            "desc": "Is Eikon for Wealth Management",
+            "usedesc": false
+        },
+        {
+            "name": "999",
+            "enabled": "True",
+            "type": "string",
+            "unit": null,
+            "desc": "Office Edition",
+            "usedesc": false
+        }
+    ],
+    "enumdict": [
+        {
+            "test": [ "49", "64" ],
+            "map": [
+                {
+                    "id": "1",
+                    "value": "\\My Documents\\Local AppData\\Thomson Reuters\\Eikon\\X"
+                },
+                {
+                    "id": "2",
+                    "value": "\\AppData\\Local\\Thomson Reuters\\Eikon"
+                },
+                {
+                    "id": "3",
+                    "value": ":\\Program Files"
+                },
+                {
+                    "id": "4",
+                    "value": ":\\Program Files (x86)"
+                },
+                {
+                    "id": "5",
+                    "value": "\\Thomson Reuters"
+                },
+                {
+                    "id": "6",
+                    "value": "\\AppData\\Local"
+                },
+                {
+                    "id": "7",
+                    "value": "\\TRD 6\\Config\\RealTime"
+                },
+                {
+                    "id": "8",
+                    "value": "\\Eikon 3.3\\Custom Display Templates\\RealTime"
+                },
+                {
+                    "id": "9",
+                    "value": "\\Eikon 3.3 x64\\Custom Display Templates\\RealTime"
+                },
+                {
+                    "id": "a",
+                    "value": ":\\Documents and Settings\\"
+                },
+                {
+                    "id": "b",
+                    "value": "\\Application Data"
+                }
+            ]
+        },
+        {
+            "test": [ "48" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Intel(R)"
+                },
+                {
+                    "id": "1",
+                    "value": "AMD Athlon(tm)"
+                },
+                {
+                    "id": "2",
+                    "value": "AMD Phenom(tm)"
+                },
+                {
+                    "id": "3",
+                    "value": "AMD Turion(tm)"
+                },
+                {
+                    "id": "4",
+                    "value": "Radeon[\\w\\W]*Graphics",
+                    "display": "Radeon Graphics"
+                },
+                {
+                    "id": "5",
+                    "value": "Quad-Core AMD"
+                },
+                {
+                    "id": "6",
+                    "value": "Compute Cores"
+                },
+                {
+                    "id": "7",
+                    "value": "Intel Core"
+                },
+                {
+                    "id": "100",
+                    "value": "Intel(R)"
+                },
+                {
+                    "id": "101",
+                    "value": "AMD Athlon(tm)"
+                },
+                {
+                    "id": "102",
+                    "value": "AMD Phenom(tm)"
+                },
+                {
+                    "id": "103",
+                    "value": "AMD Turion(tm)"
+                },
+                {
+                    "id": "110",
+                    "value": "Radeon[\\w\\W]*Graphics",
+                    "display": "Radeon Graphics"
+                },
+                {
+                    "id": "120",
+                    "value": "Quad-Core AMD"
+                },
+                {
+                    "id": "121",
+                    "value": "Compute Cores"
+                }
+            ]
+        },
+        {
+            "test": [ "36" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Thomson Reuters Eikon Excel may not run properly after installation."
+                },
+                {
+                    "id": "1",
+                    "value": "A supported version of Microsoft Excel is not found."
+                },
+                {
+                    "id": "2",
+                    "value": "Multiple versions of Microsoft Excel are installed. Thomson Reuters does not support multiple versions."
+                },
+                {
+                    "id": "3",
+                    "value": "Thomson Reuters is currently validating Thomson Reuters Eikon with"
+                },
+                {
+                    "id": "4",
+                    "value": "Excel 2003"
+                },
+                {
+                    "id": "5",
+                    "value": "Excel 2007"
+                },
+                {
+                    "id": "6",
+                    "value": "Excel 2010"
+                },
+                {
+                    "id": "7",
+                    "value": "Excel 2013"
+                },
+                {
+                    "id": "8",
+                    "value": "Excel 365 (2013)"
+                },
+                {
+                    "id": "9",
+                    "value": "Excel 365 (2016)"
+                },
+                {
+                    "id": "a",
+                    "value": "32-bit"
+                },
+                {
+                    "id": "b",
+                    "value": "64-bit"
+                },
+                {
+                    "id": "c",
+                    "value": "+ KB907417"
+                },
+                {
+                    "id": "d",
+                    "value": "+ KB2405840"
+                },
+                {
+                    "id": "e",
+                    "value": "+ KB2345035"
+                }
+            ]
+        },
+        {
+            "test": [ "136" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Word 2003"
+                },
+                {
+                    "id": "1",
+                    "value": "Word 2007"
+                },
+                {
+                    "id": "2",
+                    "value": "Word 2010"
+                },
+                {
+                    "id": "3",
+                    "value": "Word 2013"
+                },
+                {
+                    "id": "4",
+                    "value": "Word 365 (2013)"
+                },
+                {
+                    "id": "5",
+                    "value": "Word 365 (2016)"
+                },
+                {
+                    "id": "6",
+                    "value": "Word 2016"
+                },
+                {
+                    "id": "7",
+                    "value": "32-bit"
+                },
+                {
+                    "id": "8",
+                    "value": "64-bit"
+                }
+            ]
+        },
+        {
+            "test": [ "137" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "PowerPoint 2003"
+                },
+                {
+                    "id": "1",
+                    "value": "PowerPoint 2007"
+                },
+                {
+                    "id": "2",
+                    "value": "PowerPoint 2010"
+                },
+                {
+                    "id": "3",
+                    "value": "PowerPoint 2013"
+                },
+                {
+                    "id": "4",
+                    "value": "PowerPoint 365 (2013)"
+                },
+                {
+                    "id": "5",
+                    "value": "PowerPoint 365 (2016)"
+                },
+                {
+                    "id": "6",
+                    "value": "PowerPoint 2016"
+                },
+                {
+                    "id": "7",
+                    "value": "PowerPoint XP"
+                },
+                {
+                    "id": "8",
+                    "value": "PowerPoint 2000"
+                },
+                {
+                    "id": "9",
+                    "value": "32-bit"
+                },
+                {
+                    "id": "a",
+                    "value": "64-bit"
+                }
+            ]
+        },
+        {
+            "test": [ "138" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Excel is not installed."
+                },
+                {
+                    "id": "1",
+                    "value": "PowerPoint is not installed."
+                },
+                {
+                    "id": "2",
+                    "value": "Word is not installed."
+                },
+                {
+                    "id": "3",
+                    "value": "Missing: Office 32-bit"
+                },
+                {
+                    "id": "4",
+                    "value": "Missing: Office 64-bit"
+                },
+                {
+                    "id": "5",
+                    "value": "Installed: Office "
+                },
+                {
+                    "id": "6",
+                    "value": " KB968863 or KB2345035"
+                },
+                {
+                    "id": "7",
+                    "value": "Thomson Reuters Eikon - Microsoft Office may not run properly after installation. A supported version of Microsoft Office is not found."
+                },
+                {
+                    "id": "8",
+                    "value": "Multiple versions of Microsoft Office are installed. Thomson Reuters does not support multiple versions."
+                },
+                {
+                    "id": "9",
+                    "value": "32-bit"
+                },
+                {
+                    "id": "a",
+                    "value": "64-bit"
+                },
+                {
+                    "id": "b",
+                    "value": "Missing: SP2 + KB968863 or SP2 + KB2345035 or SP3"
+                },
+                {
+                    "id": "c",
+                    "value": "Thomson Reuters is currently validating Thomson Reuters Eikon with this Office version."
+                }
+            ]
+        },
+        {
+            "test": [ "27" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "(GMT +1:00) "
+                },
+                {
+                    "id": "1",
+                    "value": " Standard Time"
+                },
+                {
+                    "id": "2",
+                    "value": " Hora est"
+                }
+            ]
+        },
+        {
+            "test": [ "11" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": ". Thomson Reuters is currently validating Thomson Reuters Eikon with Internet Explorer "
+                },
+                {
+                    "id": "1",
+                    "value": "Microsoft Internet Explorer "
+                },
+                {
+                    "id": "2",
+                    "value": "-bit (IE7 Compatibility Mode activated)"
+                },
+                {
+                    "id": "3",
+                    "value": "Internet Explorer "
+                }
+            ]
+        },
+        {
+            "test": [ "62" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Thomson Reuters Eikon"
+                },
+                {
+                    "id": "1",
+                    "value": " Securities"
+                }
+            ]
+        },
+        {
+            "test": [ "93" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": " - Private Network"
+                }
+            ]
+        },
+        {
+            "test": [ "21", "29" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Chinese (Traditional)"
+                },
+                {
+                    "id": "1",
+                    "value": "Chinese (Simplified)"
+                },
+                {
+                    "id": "2",
+                    "value": "People's Republic of China "
+                },
+                {
+                    "id": "3",
+                    "value": "Unable to determine Microsoft "
+                },
+                {
+                    "id": "4",
+                    "value": "Multiple versions of Microsoft Excel are installed. Thomson Reuters provides only limited support for this setup."
+                },
+                {
+                    "id": "5",
+                    "value": "Multiple versions of Microsoft Office are installed. Thomson Reuters does not support multiple versions."
+                },
+                {
+                    "id": "6",
+                    "value": "English"
+                },
+                {
+                    "id": "7",
+                    "value": "(not_install)"
+                }
+            ]
+        },
+        {
+            "test": [ "9" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Thomson Reuters is currently validating Thomson Reuters Eikon with Windows Operating System version"
+                },
+                {
+                    "id": "1",
+                    "value": "Windows 8.1 or Windows server 2012 R2 64-bit (SKU="
+                },
+                {
+                    "id": "2",
+                    "value": "Windows 8 or Windows server 2012 64-bit (SKU="
+                },
+                {
+                    "id": "3",
+                    "value": "Microsoft Windows "
+                },
+                {
+                    "id": "4",
+                    "value": "Windows "
+                },
+                {
+                    "id": "5",
+                    "value": "Single Language"
+                }
+            ]
+        },
+        {
+            "test": [ "145", "162", "1005" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "SSL "
+                },
+                {
+                    "id": "1",
+                    "value": "TLS "
+                }
+            ]
+        },
+        {
+            "test": [ "17" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "2.0 SP2 , 3.0 SP2 , 3.5 SP1"
+                },
+                {
+                    "id": "1",
+                    "value": "2.0 SP2, 3.2 SP2, 3.5 SP1"
+                },
+                {
+                    "id": "2",
+                    "value": "2.0 SP2, 3.2 SP2, 3.5 SP1"
+                },
+                {
+                    "id": "3",
+                    "value": "4.0 Full"
+                },
+                {
+                    "id": "4",
+                    "value": " Client Profile"
+                },
+                {
+                    "id": "5",
+                    "value": " Preview or later"
+                }
+            ]
+        },
+        {
+            "test": [ "78" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "Thomson Reuters"
+                },
+                {
+                    "id": "1",
+                    "value": "for Microsoft Office"
+                },
+                {
+                    "id": "1",
+                    "value": "Spreadsheet Link"
+                },
+                {
+                    "id": "1",
+                    "value": "Reuters 3000 Xtra version"
+                }
+            ]
+        },
+        {
+            "test": [ "61" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "@thomsonreuters.com"
+                },
+                {
+                    "id": "1",
+                    "value": ".com"
+                }
+            ]
+        },
+        {
+            "test": [ "110" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": "(32-bit)"
+                },
+                {
+                    "id": "1",
+                    "value": "(64-bit)"
+                }
+            ]
+        },
+        {
+            "test": [ "", "" ],
+            "map": [
+                {
+                    "id": "0",
+                    "value": ""
+                },
+                {
+                    "id": "1",
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "statcodedict": [
+        {
+            "testname": [ "Operating System:" ],
+            "map": [
+                {
+                    "id": "9"
+                }
+            ]
+        },
+        {
+            "testname": [ "Browser Version:" ],
+            "map": [
+                {
+                    "id": "11"
+                }
+            ]
+        },
+        {
+            "testname": [ "Screen Resolution:" ],
+            "map": [
+                {
+                    "id": "5"
+                }
+            ]
+        },
+        {
+            "testname": [ "Excel Version" ],
+            "map": [
+                {
+                    "id": "36"
+                }
+            ]
+        },
+        {
+            "testname": [ "Connection Bandwidth" ],
+            "map": [
+                {
+                    "id": "95"
+                }
+            ]
+        },
+        {
+            "testname": [ "HTTP/1.1 Support" ],
+            "map": [
+                {
+                    "id": "87"
+                }
+            ]
+        },
+        {
+            "testname": [ "JavaScript Enabled" ],
+            "map": [
+                {
+                    "id": "37"
+                }
+            ]
+        },
+        {
+            "testname": [ "Processor" ],
+            "map": [
+                {
+                    "id": "3"
+                }
+            ]
+        },
+        {
+            "testname": [ "Memory" ],
+            "map": [
+                {
+                    "id": "4"
+                }
+            ]
+        },
+        {
+            "testname": [ "User Name" ],
+            "map": [
+                {
+                    "id": "61"
+                }
+            ]
+        },
+        {
+            "testname": [ "Local Host" ],
+            "map": [
+                {
+                    "id": "24"
+                }
+            ]
+        },
+        {
+            "testname": [ "Proxy HTTP/1.1 Support" ],
+            "map": [
+                {
+                    "id": "88"
+                }
+            ]
+        },
+        {
+            "testname": [ "Regional Settings" ],
+            "map": [
+                {
+                    "id": "21"
+                }
+            ]
+        },
+        {
+            "testname": [ "Saving of Encrypted Pages" ],
+            "map": [
+                {
+                    "id": "86"
+                }
+            ]
+        },
+        {
+            "testname": [ "Streaming Connectivity" ],
+            "map": [
+                {
+                    "id": "40"
+                }
+            ]
+        },
+        {
+            "testname": [ "News Streaming" ],
+            "map": [
+                {
+                    "id": "42"
+                }
+            ]
+        },
+        {
+            "testname": [ "Static Content Response Time" ],
+            "map": [
+                {
+                    "id": "112"
+                }
+            ]
+        },
+        {
+            "testname": [ "AAA Server" ],
+            "map": [
+                {
+                    "id": "120"
+                }
+            ]
+        },
+        {
+            "testname": [ "Access Point" ],
+            "map": [
+                {
+                    "id": "300"
+                }
+            ]
+        },
+        {
+            "testname": [ "Adobe Acrobat Version" ],
+            "map": [
+                {
+                    "id": "301"
+                }
+            ]
+        },
+        {
+            "testname": [ "Cookies Enabled" ],
+            "map": [
+                {
+                    "id": "302"
+                }
+            ]
+        },
+        {
+            "testname": [ "Flash Version" ],
+            "map": [
+                {
+                    "id": "303"
+                }
+            ]
+        },
+        {
+            "testname": [ "Java" ],
+            "map": [
+                {
+                    "id": "304"
+                }
+            ]
+        },
+        {
+            "testname": [ "Java Permissions" ],
+            "map": [
+                {
+                    "id": "305"
+                }
+            ]
+        },
+        {
+            "testname": [ "Java Version" ],
+            "map": [
+                {
+                    "id": "306"
+                }
+            ]
+        },
+        {
+            "testname": [ "News Content Response Time" ],
+            "map": [
+                {
+                    "id": "307"
+                }
+            ]
+        },
+        {
+            "testname": [ "Next-generation plug-in" ],
+            "map": [
+                {
+                    "id": "308"
+                }
+            ]
+        },
+        {
+            "testname": [ "Proxy Auto-Configuration" ],
+            "map": [
+                {
+                    "id": "309"
+                }
+            ]
+        },
+        {
+            "testname": [ "Proxy Override" ],
+            "map": [
+                {
+                    "id": "315"
+                }
+            ]
+        },
+        {
+            "testname": [ "Proxy Server" ],
+            "map": [
+                {
+                    "id": "310"
+                }
+            ]
+        },
+        {
+            "testname": [ "Quote Content Response Time" ],
+            "map": [
+                {
+                    "id": "311"
+                }
+            ]
+        },
+        {
+            "testname": [ "Quote Streaming" ],
+            "map": [
+                {
+                    "id": "312"
+                }
+            ]
+        },
+        {
+            "testname": [ "Scripting of Java Applets" ],
+            "map": [
+                {
+                    "id": "313"
+                }
+            ]
+        },
+        {
+            "testname": [ "Virtual Memory" ],
+            "map": [
+                {
+                    "id": "314"
+                }
+            ]
+        },
+        {
+            "testname": [ "Legacy User" ],
+            "map": [
+                {
+                    "id": "316"
+                }
+            ]
+        }
+    ]
+}

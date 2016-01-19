@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OpsConsoleService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_IOpsConsoleService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entities.PerfConsole" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOpsConsoleService_GetStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMultiStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMultiStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMultiStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_EditStat_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditStat" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_EditStat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditStatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_LogStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_LogStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetFlipQueueState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlipQueueState" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetFlipQueueState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlipQueueStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMetadataVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadataVersion" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMetadataVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadataVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetMetadataEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetMetadataEx" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetMetadataEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetMetadataExResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMachineInstallInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineInstallInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetMachineInstallInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineInstallInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationInfo" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_AggregateStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:AggregateStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_AggregateStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AggregateStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatDetail" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatDump_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatDump" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatDump_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatDumpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetLocationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetAggStatMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAggStatMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetAggStatMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAggStatMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetAggStatMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAggStatMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SetAggStatMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAggStatMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetCriticalUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticalUsers" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetCriticalUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCriticalUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetTop100LocationAtRisk_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTop100LocationAtRisk" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetTop100LocationAtRisk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTop100LocationAtRiskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SendPerfLogGZip_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPerfLogGZip" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_SendPerfLogGZip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPerfLogGZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetPerfStatNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfStatNames" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetPerfStatNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfStatNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetHistoricalPerfStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricalPerfStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetHistoricalPerfStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricalPerfStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_PushPerfLogStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:PushPerfLogStats" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_PushPerfLogStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PushPerfLogStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetPerfFlipQueueState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfFlipQueueState" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetPerfFlipQueueState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerfFlipQueueStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetTestID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestID" />
+  </wsdl:message>
+  <wsdl:message name="IOpsConsoleService_GetTestID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOpsConsoleService">
+    <wsdl:operation name="GetStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetStats" message="tns:IOpsConsoleService_GetStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetStatsResponse" message="tns:IOpsConsoleService_GetStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMultiStats" message="tns:IOpsConsoleService_GetMultiStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMultiStatsResponse" message="tns:IOpsConsoleService_GetMultiStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditStat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/EditStat" message="tns:IOpsConsoleService_EditStat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/EditStatResponse" message="tns:IOpsConsoleService_EditStat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/LogStats" message="tns:IOpsConsoleService_LogStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/LogStatsResponse" message="tns:IOpsConsoleService_LogStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlipQueueState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetFlipQueueState" message="tns:IOpsConsoleService_GetFlipQueueState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetFlipQueueStateResponse" message="tns:IOpsConsoleService_GetFlipQueueState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMetadata" message="tns:IOpsConsoleService_GetMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMetadataResponse" message="tns:IOpsConsoleService_GetMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMetadataVersion" message="tns:IOpsConsoleService_GetMetadataVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMetadataVersionResponse" message="tns:IOpsConsoleService_GetMetadataVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/SetMetadata" message="tns:IOpsConsoleService_SetMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/SetMetadataResponse" message="tns:IOpsConsoleService_SetMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMetadataEx">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/SetMetadataEx" message="tns:IOpsConsoleService_SetMetadataEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/SetMetadataExResponse" message="tns:IOpsConsoleService_SetMetadataEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineInstallInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMachineInstallInfo" message="tns:IOpsConsoleService_GetMachineInstallInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetMachineInstallInfoResponse" message="tns:IOpsConsoleService_GetMachineInstallInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetUserInfo" message="tns:IOpsConsoleService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetUserInfoResponse" message="tns:IOpsConsoleService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationInfo" message="tns:IOpsConsoleService_GetLocationInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationInfoResponse" message="tns:IOpsConsoleService_GetLocationInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AggregateStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/AggregateStats" message="tns:IOpsConsoleService_AggregateStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/AggregateStatsResponse" message="tns:IOpsConsoleService_AggregateStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatDetail" message="tns:IOpsConsoleService_GetLocationStatDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatDetailResponse" message="tns:IOpsConsoleService_GetLocationStatDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatDump">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatDump" message="tns:IOpsConsoleService_GetLocationStatDump_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatDumpResponse" message="tns:IOpsConsoleService_GetLocationStatDump_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatus" message="tns:IOpsConsoleService_GetLocationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetLocationStatusResponse" message="tns:IOpsConsoleService_GetLocationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAggStatMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetAggStatMetadata" message="tns:IOpsConsoleService_GetAggStatMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetAggStatMetadataResponse" message="tns:IOpsConsoleService_GetAggStatMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAggStatMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/SetAggStatMetadata" message="tns:IOpsConsoleService_SetAggStatMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/SetAggStatMetadataResponse" message="tns:IOpsConsoleService_SetAggStatMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticalUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetCriticalUsers" message="tns:IOpsConsoleService_GetCriticalUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetCriticalUsersResponse" message="tns:IOpsConsoleService_GetCriticalUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTop100LocationAtRisk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetTop100LocationAtRisk" message="tns:IOpsConsoleService_GetTop100LocationAtRisk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetTop100LocationAtRiskResponse" message="tns:IOpsConsoleService_GetTop100LocationAtRisk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPerfLogGZip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/SendPerfLogGZip" message="tns:IOpsConsoleService_SendPerfLogGZip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/SendPerfLogGZipResponse" message="tns:IOpsConsoleService_SendPerfLogGZip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfStatNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetPerfStatNames" message="tns:IOpsConsoleService_GetPerfStatNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetPerfStatNamesResponse" message="tns:IOpsConsoleService_GetPerfStatNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalPerfStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetHistoricalPerfStats" message="tns:IOpsConsoleService_GetHistoricalPerfStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetHistoricalPerfStatsResponse" message="tns:IOpsConsoleService_GetHistoricalPerfStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PushPerfLogStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/PushPerfLogStats" message="tns:IOpsConsoleService_PushPerfLogStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/PushPerfLogStatsResponse" message="tns:IOpsConsoleService_PushPerfLogStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfFlipQueueState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetPerfFlipQueueState" message="tns:IOpsConsoleService_GetPerfFlipQueueState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetPerfFlipQueueStateResponse" message="tns:IOpsConsoleService_GetPerfFlipQueueState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOpsConsoleService/GetTestID" message="tns:IOpsConsoleService_GetTestID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOpsConsoleService/GetTestIDResponse" message="tns:IOpsConsoleService_GetTestID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetNamedPipeBinding_IOpsConsoleService" type="tns:IOpsConsoleService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_IOpsConsoleService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="GetStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetMultiStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditStat">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/EditStat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/LogStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlipQueueState">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetFlipQueueState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadata">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataVersion">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetMetadataVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetadata">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/SetMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetadataEx">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/SetMetadataEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineInstallInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetMachineInstallInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationInfo">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetLocationInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AggregateStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/AggregateStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatDetail">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetLocationStatDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatDump">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetLocationStatDump" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationStatus">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetLocationStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAggStatMetadata">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetAggStatMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAggStatMetadata">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/SetAggStatMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCriticalUsers">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetCriticalUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTop100LocationAtRisk">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetTop100LocationAtRisk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPerfLogGZip">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/SendPerfLogGZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfStatNames">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetPerfStatNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalPerfStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetHistoricalPerfStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PushPerfLogStats">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/PushPerfLogStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerfFlipQueueState">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetPerfFlipQueueState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestID">
+      <soap12:operation soapAction="http://tempuri.org/IOpsConsoleService/GetTestID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OpsConsoleService">
+    <wsdl:port name="NetNamedPipeBinding_IOpsConsoleService" binding="tns:NetNamedPipeBinding_IOpsConsoleService">
+      <soap12:address location="net.pipe://opsconsoleservice/b1bac4c9-d3f6-44e8-99ee-98137524f18b" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://opsconsoleservice/b1bac4c9-d3f6-44e8-99ee-98137524f18b</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

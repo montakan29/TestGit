@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4627B75B-1890-48BA-9D31-0D10861F84AB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemTestService</RootNamespace>
+    <AssemblyName>SystemTestService</AssemblyName>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>
+    </StartArguments>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EikonEnvManager.ProcessManagement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c962212ff875b4f0, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TR.AppServer.Interfaces">
+      <HintPath>Libs\TR.AppServer.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TR.AppServer.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=20ed6be3b46bd29c, processorArchitecture=MSIL" />
+    <Reference Include="Wcf.Routing.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=32ce9fad3c6a27ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="WinSCPnet, Version=1.1.5.4214, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>winscp\WinSCPnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConcurrentFlushQueue.cs" />
+    <Compile Include="DataMapper.cs" />
+    <Compile Include="EemCommands\CleanTempFile.cs" />
+    <Compile Include="EemCommands\DumpSystemTest.cs" />
+    <Compile Include="EemCommands\DumpDBCommand.cs" />
+    <Compile Include="EemCommands\MergeTestID.cs" />
+    <Compile Include="EemCommands\UpdateSetting.cs" />
+    <Compile Include="Entities\Stat.cs" />
+    <Compile Include="ISystemTestService.cs" />
+    <Compile Include="Entities\Metadata.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Service References\AppHitsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OpsConsoleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserInfoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SystemTestService.cs" />
+    <Compile Include="Entities\TestResult.cs" />
+    <Compile Include="UpdateOpsConsoleDb.cs" />
+    <Compile Include="Entities\UserInfo.cs" />
+    <Compile Include="Utility\ConfigUtil.cs" />
+    <Compile Include="Utility\ConsoleTable.cs" />
+    <Compile Include="DataDumper.cs" />
+    <Compile Include="Utility\Formator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Schema.json" />
+    <None Include="Service References\AppHitsService\apphits.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\Message.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\service.wsdl" />
+    <None Include="Service References\AppHitsService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\service1.wsdl" />
+    <None Include="Service References\AppHitsService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\SystemTestService.AppHitsService.QueueDepthConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\SystemTestService.AppHitsService.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\SystemTestService.AppHitsService.SimpleClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\SystemTestService.AppHitsService.UserFeatureHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.Services.AppHits.Entites.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.PerfConsole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service.wsdl" />
+    <None Include="Service References\OpsConsoleService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.EditStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.FlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetAggStatMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetCriticalUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetHistoricalStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetLocationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetLocationStatDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetLocationStatDumpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetLocationStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetMultiStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetStatNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetTop100LocationAtRiskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.LogStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.MachInstInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.MetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.PerfFlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.PushPerfStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\SystemTestService.OpsConsoleService.SendPerfLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\MongoDB.Bson.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\service.wsdl" />
+    <None Include="Service References\UserInfoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.ComponentModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.CheckUserScopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.FindLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.FindMachineResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.FindUniversalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.FindUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.GetMachineInfoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.Location.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.PreferenceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.ResponseOfEikonUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.ResponseOfLdapUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.ResponseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.ResponseOfUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\SystemTestService.UserInfoService.UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.AccountHierarchyService_2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.DataContract.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoServiceMongo.Database.MongodbData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="winscp\WinSCP.com">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\Wcf.Routing.Client.dll" />
+    <None Include="Libs\TR.AppServer.Interfaces.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libs\EikonEnvManager.ProcessManagement.dll" />
+    <None Include="Libs\TR.AppServer.Logging.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OpsConsoleService\configuration91.svcinfo" />
+    <None Include="Service References\OpsConsoleService\configuration.svcinfo" />
+    <None Include="Service References\OpsConsoleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserInfoService\configuration91.svcinfo" />
+    <None Include="Service References\UserInfoService\configuration.svcinfo" />
+    <None Include="Service References\UserInfoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AppHitsService\configuration91.svcinfo" />
+    <None Include="Service References\AppHitsService\configuration.svcinfo" />
+    <None Include="Service References\AppHitsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="testFTP.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\license-dotnet.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\readme_automation.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\WinSCP.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winscp\WinSCPnet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AppHitsService\" />
+    <WCFMetadataStorage Include="Service References\OpsConsoleService\" />
+    <WCFMetadataStorage Include="Service References\UserInfoService\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

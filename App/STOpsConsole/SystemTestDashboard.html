@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SystemTest Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="Styles/OpsConsole_dark.css"/>
+    <script type="text/javascript" src="Scripts/AppHits.ClientSide.min.js"></script>
+    <script type="text/javascript" src="Scripts/OpsConsoleLib.js"></script>
+    <style>
+        .UserStatIcon {
+		    display:block;
+		    width: 15px;
+		    height: 16px;
+            background: url(images/nova/icons_text.png) -1px -93px;
+		    background-repeat: no-repeat;
+	    }
+
+        .UserStatImgButton {
+		    display:block;
+		    width: 0px;
+		    height: 15px;
+            background: url(images/nova/events01.png) -17px -188px;
+		    background-repeat: no-repeat;
+	    }
+
+        .slick-group-title[level='0'] {
+          font-weight:700;
+          color: lightgray;
+        }
+        .slick-viewport {
+            overflow-x: hidden !important;
+        }
+        .ui-layout-center,
+        .ui-layout-north {
+            padding:        0;
+            overflow:        hidden;
+        }
+        .hidden {
+            display:        none;
+        }
+        .ui-widget-header {
+            padding:        7px 15px 9px;
+        }
+        H2.loading {
+            border:            0;
+            font-size:        24px;
+            font-weight:    normal;
+            margin:            30% 0 0 40%;
+        }
+	
+	    .ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png)/*{iconsContent}*/; }
+	
+	    /*
+	     *	Layout Togglers 
+	     */
+	    .ui-layout-toggler {
+		    background-color: #FFF;
+		    opacity:		.60;
+		    filter:			Alpha(Opacity=60);
+	    }
+	    .ui-layout-resizer-open-hover .ui-layout-toggler, 
+	    .ui-layout-toggler-hover {
+		    opacity:		1;
+		    filter:			Alpha(Opacity=100);
+	    }
+	    .ui-layout-toggler .ui-icon			{ margin:		0 auto; } /* default - center horizontally */
+	    .ui-layout-toggler-north .ui-icon   { margin-top:	-5px; }*
+	    .ui-layout-toggler-south .ui-icon	{ margin-top:	-5px; } /* tweak arrow vertical-center */
+	    .ui-layout-toggler-west .ui-icon    { margin-left:	-5px; }
+	    .ui-layout-toggler-east .ui-icon	{ margin-left:	-3px; } /* tweak arrow horizontal-center */
+	    /* assign arrows for each side & state */
+	    .ui-layout-toggler-north-closed .ui-icon, 
+	    .ui-layout-toggler-south-open .ui-icon {
+	 	    background-position: -64px -192px;	/* ui-icon-circle-triangle-s */
+		    background-position: -128px -16px;	/* ui-icon-triangle-2-n-s */
+		    background-position: -64px -18px;	/* ui-icon-triangle-1-s */
+	    }
+	    .ui-layout-toggler-south-closed .ui-icon, 
+	    .ui-layout-toggler-north-open .ui-icon {
+	 	    background-position: -96px -192px;	/* ui-icon-circle-triangle-n */
+		    background-position: -128px -16px;	/* ui-icon-triangle-2-n-s */
+		    background-position: 0 -17px;		/* ui-icon-triangle-1-n */
+	    }
+	    .ui-layout-toggler-west-closed .ui-icon, 
+	    .ui-layout-toggler-east-open .ui-icon {
+	 	    background-position: -48px -192px;	/* ui-icon-circle-triangle-e */
+		    background-position: -144px -16px;	/* ui-icon-triangle-2-e-w */
+		    background-position: -37px -16px;	/* ui-icon-triangle-1-e */
+	    }
+	    .ui-layout-toggler-east-closed .ui-icon, 
+	    .ui-layout-toggler-west-open .ui-icon {
+	 	    background-position: -80px -192px;	/* ui-icon-circle-triangle-w */
+		    background-position: -144px -16px;	/* ui-icon-triangle-2-e-w */
+		    background-position: -99px -16px;	/* ui-icon-triangle-1-w */
+	    }
+
+        .ui-layout-south { 
+            padding:    0; 
+            overflow:    hidden; /* NO SCROLL */ 
+        } 
+
+        .status-critical
+        {
+            color:#c03939;
+        }
+        .status-warning
+        {
+            color: #d5a807;
+        }
+
+        .loading-indicator label {
+            padding-left: 20px;
+            background: url('images/nova/spinner-20x20.png') no-repeat center left;
+        }
+    </style>
+</head>
+<body onload="showEnvironment();">
+    <h1 id="pageLoadingStatus" style="margin:20px; font:Bold 13px Arial, Helvetica, sans-serif;"></h1>
+    <div class="ui-layout-north hidden">
+        <div class="header-title-banner">
+            <div class="page-title-container">
+                <div class="page-title-item">
+                    Eikon System Test&nbsp;&nbsp;<span id="opsConsoleVersion"></span>
+                </div>
+            </div>
+            <div class="page-title-item-right">
+                <span class="page-title-blink-text" id="spanDataEnv" style="display:none;">N/A</span>
+            </div>
+            <div class="flex-item">
+                <table style="line-height:100%;">
+                  <!--<tr style="word-break:keep-all;">
+                    <td colspan="2" style="white-space: nowrap; padding: 10px 10px 0px 12px;">
+                        <b>Aggregated period:</b>&nbsp;&nbsp;&nbsp;<span id="spanAggPeriod"></span>
+                    </td>
+                  </tr>-->
+                  <tr style="word-break:keep-all;">
+                    <td colspan="1" style="white-space: nowrap; padding: 10px 10px 0px 10px;">
+                        <button id="previousPeriodBtn" onclick="goPreviousPeriod()"><<</button>
+                        <span id="spanAggPeriod"></span>
+                        <button id="nextPeriodBtn" onclick="goNextPeriod()" disabled>>></button>
+                        <input type="checkbox" id="chkShowLatestPeriod" onchange="chkShowLatestPeriod_Changed();" disabled /><label for="chkShowLatestPeriod">Latest Period</label>
+                        <input type="checkbox" id="chkShowStatCodes" onchange="chkShowStatCodes_Changed();" disabled /><label for="chkShowStatCodes">Show Stat Codes</label>
+                        &nbsp;&nbsp;<button onclick="OnClickAggStatMetadataBtn();" style="height:25px;" id="thresholdBtn">Threshold...</button>
+                        &nbsp;&nbsp;<button onclick="window.top.location.href = '/Apps/STOpsConsole'+getCurrentSelectedCriticalUser();" style="width:98px; height:25px;"><span class="UserStatImgButton" style="padding-left:19px; margin-bottom:0px;"><div style="position:relative; top:-2px;">User Stats</div></span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                      <td colspan="1" style="font-size: 11px; white-space: nowrap; padding: 13px 10px 0px 10px;">
+                        <!--&nbsp;&nbsp;<span id="spanInterval"></span>-->
+                        &nbsp;&nbsp;<b>Updated at:</b>&nbsp;&nbsp;&nbsp;<span id="spanUpdatedAt"></span>
+                        <!--<span class='loading-indicator'><label>Buffer</label></span>-->
+                      </td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="ui-layout-west hidden"></div>
+    <div class="ui-layout-center hidden">
+        <div class="flex-item flex-col content" >
+            <div class="flex-item colorBlock-header" style="word-break:keep-all;">
+                <table style="width:100%;">
+                  <tr style="word-break:keep-all; white-space: nowrap;">
+                    <td width="140">
+						<span id="locationStatHeader" class="colorBlock-header-span">Locations at Risk</span>
+					</td>
+					<td width="220">
+						<input style="width:208px;" type="text" id="locationFilterTextInput" placeholder="Search by company or address..." disabled />
+					</td>
+                      <td align="right">
+                          <span class="colorBlock-header-icon1">
+                              <i id='locStatDownload' class="icon-copy-clipboard" title="Selct a location before Export to Excel" onclick="downloadExcel('DownloadLocationStatData');"></i>
+                          </span>
+                      </td>
+				  </tr>
+				</table>
+            </div>
+            <div id="cc" class="flex-item flex-split1">
+                <div style="-webkit-user-select:text;-moz-user-select:text;user-select:text" id="gridLocationStat" ></div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-layout-east hidden" id="inner">
+        <div class="ui-layout-center hidden">
+            <div class="flex-item flex-col content" >
+                <div class="flex-item colorBlock-header">
+                    <span id="locationStatDetailHeader" class="colorBlock-header-span" style="vertical-align:baseline;">Location Details</span>
+                    <span id="spanLocation" class="colorBlock-header-text-04" style="vertical-align:baseline; font-size:11px; color:#e2e2e2;"></span>
+                </div>
+                <div class="flex-item flex-split1">
+                    <div style="-webkit-user-select:text;-moz-user-select:text;user-select:text" id="gridLocationStatDetail" ></div>
+                    <div id="divLoactionStatDetailLoading" style="padding-top:25px; font-size:12px; color:rgb(200, 200, 200); font-family:Arial, Helvetica, sans-serif; position: absolute; background-color: rgba(50, 50,50, 0.7); display: none; font-weight: bold; z-index: 10; text-align:center; font-weight:bold">
+                    Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-layout-south hidden">
+            <div class="flex-item flex-col content" >
+                <div class="flex-item colorBlock-header">
+                    <span id="criticalUserHeader" class="colorBlock-header-span" style="vertical-align:baseline;">Users At Risk</span>
+                    <span id="spanStatName" class="colorBlock-header-text-04" style="vertical-align:baseline; font-size:11px; color:#e2e2e2;"></span>
+                </div>
+                <div class="flex-item flex-split1">
+                    <div style="-webkit-user-select:text;-moz-user-select:text;user-select:text" id="gridCriticalUsers" ></div>
+                    <div id="divCriticalUserLoading" style="padding-top:25px; font-size:12px; color:rgb(200, 200, 200); font-family:Arial, Helvetica, sans-serif; position: absolute; background-color: rgba(50, 50,50, 0.7); display: none; font-weight: bold; z-index: 10; text-align:center; font-weight:bold">
+                    Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Upload Aggregated Stat Metadata dialog -->
+    <div id="dialogUploadAggStatMetadata" style="display: none;">
+        <style>
+            #metadataContent:focus
+            {
+                border: 1px solid #3c3c42;
+            }
+            #metadataContent
+            {
+                border: 1px solid #3c3c42;
+                margin-left:8px;
+                margin-right:8px;
+                width: 97%;
+                height:280px;
+                background-color: #151516;
+                overflow: auto;
+                color: #b2b2b2;
+            }
+
+            .fileUpload {
+	            position: relative;
+	            overflow: hidden;
+	            margin: 10px;
+            }
+
+            .fileUpload input.upload {
+	            position: absolute;
+	            top: 0;
+	            right: 0;
+	            margin: 0;
+	            padding: 0;
+	            cursor: pointer;
+	            opacity: 0;
+	            filter: alpha(opacity=0);
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 0 8px;
+                vertical-align: middle;
+                font-size: 13px;
+                white-space: nowrap;
+                line-height: 21px;
+                -webkit-transition: all .1s ease-out;
+                transition: all .1s ease-out;
+                font-weight: 400;
+                cursor: pointer;
+                background-image: -webkit-linear-gradient(top,rgba(255,255,255,.1)0,rgba(255,255,255,0)100%);
+                background-color: #3c3c42;
+                border: solid 1px #0a0a0a;
+                border-radius: 0;
+                color: #b2b2b2;
+                box-shadow: inset 0 1px 0 0 rgba(255,255,255,.06);
+            }
+        </style>
+        <div class="l-table s-table1">
+            <div class="l-table-row">
+                <div class="l-table-cell align3">
+                    <span class="">Aggregated Interval (mins):</span>
+                </div>
+                <div class="l-table-cell">
+                    <span id="spanAggInterval"></span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <textarea id="metadataContent" wrap='off' readonly></textarea>
+        </div>
+        <div id="dialogUploadAggStatMetadata" class="l-table s-table1">
+            <div class="l-table-row">
+                <div class="l-table-cell align3">
+                    <span class="">Status</span>
+                </div>
+                <div class="l-table-cell">
+                    <span id="uploadStatus">Ready</span>
+                </div>
+            </div>
+            <div class="l-table-row">
+                <div class="l-table-cell align3">
+                    <span class="">Metadata File</span>
+                </div>
+                <div class="l-table-cell">
+                    <form action="/Apps/STOpsConsole/UploadAggStatMetadata" method="post">
+                        <input type="text" id="uploadFile" placeholder="Choose File" disabled="disabled" style="width:200px;"/>
+                        <div class="fileUpload btn">
+                            <span>Browse</span>
+                            <input type="file" class="upload" id="inputFile" name="metadata" member="metadataForm" onchange="OnFileSelected();" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function OnFileSelected() {
+            // Extract the file name from path and show it in the input text box
+            var patt = new RegExp('[\\w-_()&$\\s]+[.]*[\\w]*$');
+            $('#uploadFile').val(patt.exec($('#inputFile').val()));
+
+            // Set the status to ready
+            $('#uploadStatus').text('Ready');
+        }
+    </script>
+    <script type="text/javascript" src="Scripts/OpsConsoleDashboard_logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{98AE52CD-46F1-4DBA-AAD7-0FFFC016F3B1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{D4B41ED8-A3F0-46F3-88DE-9AC67590B63F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThomsonReuters.Eikon.STOpsConsole</RootNamespace>
+    <AssemblyName>ThomsonReuters.Eikon.STOpsConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableJSDebugging>False</EnableJSDebugging>
+    <!-- The following properties are used by the extension -->
+    <BaseExtensionPath>$(LOCALAPPDATA)</BaseExtensionPath>
+    <AppServerSDKPath>\Microsoft\VisualStudio\12.0\Extensions\g3vriuch.2tz</AppServerSDKPath>
+    <IsAppServerApp>True</IsAppServerApp>
+    <CreatedVersion>1.0.0.11</CreatedVersion>
+    <UpgradedVersion>
+    </UpgradedVersion>
+    <AppServerSchemaVersion>1</AppServerSchemaVersion>
+    <AppEnginePath>Thomson Reuters\Eikon UI Toolkit\Eikon App Engine.appref-ms</AppEnginePath>
+    <AppEngineHostUrl>https://amers1.views.cp.icp2.mpp.reutest.com/TRS/ClickOnce/EikonAppEngine/EikonAppEngine.application</AppEngineHostUrl>
+    <DebuggerAttachTimeout>45</DebuggerAttachTimeout>
+    <AppServersToLaunch>2</AppServersToLaunch>
+    <AppEngineParameters>
+    </AppEngineParameters>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThomsonReuters.Eikon.Toolkit.Interfaces.Shared">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\ThomsonReuters.Eikon.Toolkit.Interfaces.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TR.AppServer.Interfaces">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\TR.AppServer.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TR.AppServer.Logging">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\TR.AppServer.Logging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Wcf.Routing.Client">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\Wcf.Routing.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AaaUser.cs" />
+    <Compile Include="HttpFormFileContentPaarser.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationType.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\alert.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\alert_grey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\alert_red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\alert_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\back_disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\back_enabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\back_enabled_hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\bullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyleft_click.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyleft_hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyleft_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyright_click.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyright_hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\copyright_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\error.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\fail.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\forward_disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\forward_enabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\forward_enabled_hover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\halflings-white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\info.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mCSB_buttons.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\calendar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\duplicate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\events01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\icons.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\icons_8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\icons_text.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\pin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\select_arrow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\spinner-12x12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\spinner-16x16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\spinner-20x20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\nova\sprite-ui-icons.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\Refresh.PNG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\refresh_disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\search-icn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sort_asc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sort_asc_disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sort_both.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sort_desc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\sort_desc_disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\ui-icons_222222_256x240.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\warn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\labels.en-US.resx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\labels.ja-JP.resx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\labels.zh-CN.resx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.PerfConsole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service.wsdl" />
+    <None Include="Service References\OpsConsoleService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\System.Collections.Generic2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.EditStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.FlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetAggStatMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetCriticalUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetHistoricalStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetLocationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetLocationStatDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetLocationStatDumpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetLocationStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetMultiStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetStatNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetTop100LocationAtRiskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.LogStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.MachInstInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.MetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.PerfFlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.PushPerfStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.STOpsConsole.OpsConsoleService.SendPerfLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\configuration91.svcinfo" />
+    <None Include="Service References\OpsConsoleService\configuration.svcinfo" />
+    <None Include="Service References\OpsConsoleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserInfoService\configuration91.svcinfo" />
+    <None Include="Service References\UserInfoService\configuration.svcinfo" />
+    <None Include="Service References\UserInfoService\MongoDB.Bson.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\AppHits.ClientSide.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\images\collapse.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\images\expand.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\OpsConsole_dark.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\highcharts-all.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\highcharts-more.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\highcharts-more.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\highcharts.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\highcharts.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\annotations.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\annotations.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\canvas-tools.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\canvas-tools.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\data.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\data.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\drilldown.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\drilldown.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\exporting.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\exporting.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\funnel.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\funnel.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\heatmap.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\heatmap.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\map.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\map.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\no-data-to-display.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\highcharts\modules\no-data-to-display.src.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OpsConsoleDashboard_logic.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OpsConsoleLib.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\OpsConsole_logic.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\webui.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SystemTest.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SystemTestDashboard.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionedResources\client.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionedResources\jquery\dateFormat.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VersionedResources\schema2.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.CheckUserScopeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.FindMachineResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.GetMachineInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.ResponseOfEikonUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.ResponseOfLdapUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.ResponseOfstring.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.ResponseOfUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.DataContract.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoServiceMongo.Database.MongodbData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Service References\OpsConsoleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserInfoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StubString.cs" />
+    <Compile Include="WebCallableFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Readme.txt" />
+    <None Include="Service References\UserInfoService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\service.wsdl" />
+    <None Include="Service References\UserInfoService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.ComponentModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\System.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.FindLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.FindUniversalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.FindUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.Location.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.PreferenceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\ThomsonReuters.Eikon.STOpsConsole.UserInfoService.UserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.AccountHierarchyService_2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserInfoService\TR.AppServer.UserInfoService.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Styles\fonts\2AC321_0_0.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\2AC321_0_0.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-regular-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-regular-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-regularit-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-regularit-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-semibold-webfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\fonts\proximanova-semibold-webfont.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\OpsConsoleService\" />
+    <WCFMetadataStorage Include="Service References\UserInfoService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

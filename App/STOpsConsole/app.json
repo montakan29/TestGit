@@ -1,0 +1,8 @@
+﻿{
+	"name": "STOpsConsole",
+	"displayName": "STOpsConsole",
+  "version": "1.0.0",
+	"description" : "STOpsConsole DotNet app",
+	"defaultPlatform" : "DotNet",
+	"defaultPage": "SystemTest.html"
+}

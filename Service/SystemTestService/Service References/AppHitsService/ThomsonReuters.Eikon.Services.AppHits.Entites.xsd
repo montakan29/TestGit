@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="QueueDepthConfigRequest">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="QueueDepthConfigRequest" nillable="true" type="tns:QueueDepthConfigRequest" />
+  <xs:complexType name="QueueDepthConfigResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PingIntervalSeconds" type="xs:float" />
+      <xs:element minOccurs="0" name="PingTimeoutSeconds" type="xs:float" />
+      <xs:element minOccurs="0" name="QueueDepth" type="xs:int" />
+      <xs:element minOccurs="0" name="QueueDepthTrigger" type="xs:int" />
+      <xs:element minOccurs="0" name="UploadTimeoutSeconds" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueueDepthConfigResponse" nillable="true" type="tns:QueueDepthConfigResponse" />
+  <xs:complexType name="RefreshUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RefreshUserRequest" nillable="true" type="tns:RefreshUserRequest" />
+  <xs:complexType name="UserFeatureHistoryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeatureName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxDataPoints" type="xs:int" />
+      <xs:element minOccurs="0" name="Period" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserFeatureHistoryRequest" nillable="true" type="tns:UserFeatureHistoryRequest" />
+  <xs:complexType name="UserFeatureHistoryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="DataPoints" nillable="true" type="tns:ArrayOfUsageDataPoint" />
+      <xs:element minOccurs="0" name="FeatureInfo" nillable="true" type="tns:FeatureInfo" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserFeatureHistoryResponse" nillable="true" type="tns:UserFeatureHistoryResponse" />
+  <xs:complexType name="ArrayOfUsageDataPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsageDataPoint" nillable="true" type="tns:UsageDataPoint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsageDataPoint" nillable="true" type="tns:ArrayOfUsageDataPoint" />
+  <xs:complexType name="UsageDataPoint">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsageDataPoint" nillable="true" type="tns:UsageDataPoint" />
+  <xs:complexType name="FeatureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Configured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Discard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FeatureName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubProductCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FeatureInfo" nillable="true" type="tns:FeatureInfo" />
+</xs:schema>

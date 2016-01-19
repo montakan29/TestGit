@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.NetNamedPipeBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;NetNamedPipeBinding_IPlatformUsageDataCollector1&quot; transferMode=&quot;Streamed&quot;&gt;&lt;security mode=&quot;None&quot; /&gt;&lt;/Data&gt;" bindingType="netNamedPipeBinding" name="NetNamedPipeBinding_IPlatformUsageDataCollector1" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://iplatformusagedatacollector/ce48bc7e-6a37-45a2-b9c8-a50d2a28a598&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IPlatformUsageDataCollector1&quot; contract=&quot;PlatformUsageDataCollector.IPlatformUsageDataCollector&quot; name=&quot;NetNamedPipeBinding_IPlatformUsageDataCollector1&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://iplatformusagedatacollector/ce48bc7e-6a37-45a2-b9c8-a50d2a28a598&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IPlatformUsageDataCollector1&quot; contract=&quot;PlatformUsageDataCollector.IPlatformUsageDataCollector&quot; name=&quot;NetNamedPipeBinding_IPlatformUsageDataCollector1&quot; /&gt;" contractName="PlatformUsageDataCollector.IPlatformUsageDataCollector" name="NetNamedPipeBinding_IPlatformUsageDataCollector1" />
+  </endpoints>
+</configurationSnapshot>

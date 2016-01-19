@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:complexType name="GetStatsRequest">
+    <xs:sequence>
+      <xs:element name="getAllStats" type="xs:boolean" />
+      <xs:element name="getStatHistory" type="xs:boolean" />
+      <xs:element name="getStatHistoryFor" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="installGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStatsRequest" nillable="true" type="tns:GetStatsRequest" />
+  <xs:complexType name="GetStatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element name="history" nillable="true" type="tns:StatHistory" />
+      <xs:element minOccurs="0" name="hostName" nillable="true" type="xs:string" />
+      <xs:element name="installGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="stats" nillable="true" type="tns:ArrayOfStatItem" />
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStatsResponse" nillable="true" type="tns:GetStatsResponse" />
+  <xs:complexType name="StatHistory">
+    <xs:sequence>
+      <xs:element name="rows" nillable="true" type="tns:ArrayOfStatHitstoryRow">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatHistory" nillable="true" type="tns:StatHistory" />
+  <xs:complexType name="ArrayOfStatHitstoryRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatHitstoryRow" nillable="true" type="tns:StatHitstoryRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatHitstoryRow" nillable="true" type="tns:ArrayOfStatHitstoryRow" />
+  <xs:complexType name="StatHitstoryRow">
+    <xs:sequence>
+      <xs:element name="statVal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeStamp" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatHitstoryRow" nillable="true" type="tns:StatHitstoryRow" />
+  <xs:complexType name="ArrayOfStatItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatItem" nillable="true" type="tns:StatItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatItem" nillable="true" type="tns:ArrayOfStatItem" />
+  <xs:complexType name="StatItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="configured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="discard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="statDisplayName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statLatestVal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeStamp" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatItem" nillable="true" type="tns:StatItem" />
+  <xs:complexType name="GetMultiStatsRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="getStatHistoryFor" nillable="true" type="q1:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="products" nillable="true" type="q2:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMultiStatsRequest" nillable="true" type="tns:GetMultiStatsRequest" />
+  <xs:complexType name="GetMultiStatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element name="history" nillable="true" type="tns:ArrayOfStatHistoryList" />
+      <xs:element minOccurs="0" name="hostName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMultiStatsResponse" nillable="true" type="tns:GetMultiStatsResponse" />
+  <xs:complexType name="ArrayOfStatHistoryList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatHistoryList" nillable="true" type="tns:StatHistoryList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatHistoryList" nillable="true" type="tns:ArrayOfStatHistoryList" />
+  <xs:complexType name="StatHistoryList">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StatHistory">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="installGuid" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="machineGuid" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StatHistoryList" nillable="true" type="tns:StatHistoryList" />
+  <xs:complexType name="EditStatRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element name="discard" type="xs:boolean" />
+      <xs:element name="hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statDisplayName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditStatRequest" nillable="true" type="tns:EditStatRequest" />
+  <xs:complexType name="EditStatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EditStatResponse" nillable="true" type="tns:EditStatResponse" />
+  <xs:complexType name="LogStatsRequest">
+    <xs:sequence>
+      <xs:element name="stats" nillable="true" type="tns:ArrayOfLogStatItem">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogStatsRequest" nillable="true" type="tns:LogStatsRequest" />
+  <xs:complexType name="ArrayOfLogStatItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogStatItem" nillable="true" type="tns:LogStatItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogStatItem" nillable="true" type="tns:ArrayOfLogStatItem" />
+  <xs:complexType name="LogStatItem">
+    <xs:sequence>
+      <xs:element name="installGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statVal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeStamp" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogStatItem" nillable="true" type="tns:LogStatItem" />
+  <xs:complexType name="LogStatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogStatsResponse" nillable="true" type="tns:LogStatsResponse" />
+  <xs:complexType name="FlipQueueStateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlipQueueStateRequest" nillable="true" type="tns:FlipQueueStateRequest" />
+  <xs:complexType name="FlipQueueStateResponse">
+    <xs:sequence>
+      <xs:element name="ready" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlipQueueStateResponse" nillable="true" type="tns:FlipQueueStateResponse" />
+  <xs:complexType name="GetMetadataRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="disable" nillable="true" type="q3:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMetadataRequest" nillable="true" type="tns:GetMetadataRequest" />
+  <xs:complexType name="GetMetadataVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMetadataVersion" nillable="true" type="tns:GetMetadataVersion" />
+  <xs:complexType name="MetadataResponse">
+    <xs:sequence>
+      <xs:element name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MetadataResponse" nillable="true" type="tns:MetadataResponse" />
+  <xs:complexType name="SetMetadataRequest">
+    <xs:sequence>
+      <xs:element name="metadata" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetMetadataRequest" nillable="true" type="tns:SetMetadataRequest" />
+  <xs:complexType name="MachInstInfoRequest">
+    <xs:sequence>
+      <xs:element name="filter" type="xs:boolean" />
+      <xs:element minOccurs="0" name="instGUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="machGUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="uuids" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachInstInfoRequest" nillable="true" type="tns:MachInstInfoRequest" />
+  <xs:complexType name="MachInstInfoResponse">
+    <xs:sequence>
+      <xs:element name="Items" nillable="true" type="tns:ArrayOfMachInstInfoItem" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachInstInfoResponse" nillable="true" type="tns:MachInstInfoResponse" />
+  <xs:complexType name="ArrayOfMachInstInfoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MachInstInfoItem" nillable="true" type="tns:MachInstInfoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMachInstInfoItem" nillable="true" type="tns:ArrayOfMachInstInfoItem" />
+  <xs:complexType name="MachInstInfoItem">
+    <xs:sequence>
+      <xs:element name="machInstInfoList" nillable="true" type="tns:ArrayOfMachInstInfo" />
+      <xs:element name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachInstInfoItem" nillable="true" type="tns:MachInstInfoItem" />
+  <xs:complexType name="ArrayOfMachInstInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MachInstInfo" nillable="true" type="tns:MachInstInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMachInstInfo" nillable="true" type="tns:ArrayOfMachInstInfo" />
+  <xs:complexType name="MachInstInfo">
+    <xs:sequence>
+      <xs:element name="dateLastSeen" nillable="true" type="xs:string" />
+      <xs:element name="hostName" nillable="true" type="xs:string" />
+      <xs:element name="id" nillable="true" type="xs:string" />
+      <xs:element name="instGUID" nillable="true" type="xs:string" />
+      <xs:element name="machGUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachInstInfo" nillable="true" type="tns:MachInstInfo" />
+  <xs:complexType name="GetUserInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUserInfoRequest" nillable="true" type="tns:GetUserInfoRequest" />
+  <xs:complexType name="GetUserInfoResponse">
+    <xs:sequence>
+      <xs:element name="userInfo" nillable="true" type="tns:UserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUserInfoResponse" nillable="true" type="tns:GetUserInfoResponse" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element name="firstName" nillable="true" type="xs:string" />
+      <xs:element name="lastName" nillable="true" type="xs:string" />
+      <xs:element name="locationAccountID" nillable="true" type="xs:string" />
+      <xs:element name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="GetLocationInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="locationID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationInfoRequest" nillable="true" type="tns:GetLocationInfoRequest" />
+  <xs:complexType name="GetLocationInfoResponse">
+    <xs:sequence>
+      <xs:element name="locationInfo" nillable="true" type="tns:LocationInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationInfoResponse" nillable="true" type="tns:GetLocationInfoResponse" />
+  <xs:complexType name="LocationInfo">
+    <xs:sequence>
+      <xs:element name="address" nillable="true" type="xs:string" />
+      <xs:element name="city" nillable="true" type="xs:string" />
+      <xs:element name="country" nillable="true" type="xs:string" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+      <xs:element name="nearestLegalEntityId" nillable="true" type="xs:string" />
+      <xs:element name="type" nillable="true" type="xs:string" />
+      <xs:element name="ultimateParentId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationInfo" nillable="true" type="tns:LocationInfo" />
+  <xs:complexType name="GetLocationStatDetailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="beginStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="locationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="minInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="snapReqDateToInterval" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDetailRequest" nillable="true" type="tns:GetLocationStatDetailRequest" />
+  <xs:complexType name="GetLocationStatDetailResponse">
+    <xs:sequence>
+      <xs:element name="beginStartPeriod" nillable="true" type="xs:string" />
+      <xs:element name="currentMinInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="endStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statsForAllIntervals" nillable="true" type="tns:ArrayOfGetLocationStatDetailByInterval" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDetailResponse" nillable="true" type="tns:GetLocationStatDetailResponse" />
+  <xs:complexType name="ArrayOfGetLocationStatDetailByInterval">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLocationStatDetailByInterval" nillable="true" type="tns:GetLocationStatDetailByInterval" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLocationStatDetailByInterval" nillable="true" type="tns:ArrayOfGetLocationStatDetailByInterval" />
+  <xs:complexType name="GetLocationStatDetailByInterval">
+    <xs:sequence>
+      <xs:element name="minInterval" type="xs:int" />
+      <xs:element name="statsForAllLocations" nillable="true" type="tns:ArrayOfGetLocationStatDetailByLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDetailByInterval" nillable="true" type="tns:GetLocationStatDetailByInterval" />
+  <xs:complexType name="ArrayOfGetLocationStatDetailByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLocationStatDetailByLocation" nillable="true" type="tns:GetLocationStatDetailByLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLocationStatDetailByLocation" nillable="true" type="tns:ArrayOfGetLocationStatDetailByLocation" />
+  <xs:complexType name="GetLocationStatDetailByLocation">
+    <xs:sequence>
+      <xs:element name="address" nillable="true" type="xs:string" />
+      <xs:element name="city" nillable="true" type="xs:string" />
+      <xs:element name="country" nillable="true" type="xs:string" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+      <xs:element name="statsForAllPeriods" nillable="true" type="tns:ArrayOfGetLocationStatDetailByPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDetailByLocation" nillable="true" type="tns:GetLocationStatDetailByLocation" />
+  <xs:complexType name="ArrayOfGetLocationStatDetailByPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLocationStatDetailByPeriod" nillable="true" type="tns:GetLocationStatDetailByPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLocationStatDetailByPeriod" nillable="true" type="tns:ArrayOfGetLocationStatDetailByPeriod" />
+  <xs:complexType name="GetLocationStatDetailByPeriod">
+    <xs:sequence>
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+      <xs:element name="stats" nillable="true" type="tns:ArrayOfAggStatsRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDetailByPeriod" nillable="true" type="tns:GetLocationStatDetailByPeriod" />
+  <xs:complexType name="ArrayOfAggStatsRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AggStatsRecord" nillable="true" type="tns:AggStatsRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAggStatsRecord" nillable="true" type="tns:ArrayOfAggStatsRecord" />
+  <xs:complexType name="AggStatsRecord">
+    <xs:sequence>
+      <xs:element name="count" type="xs:int" />
+      <xs:element name="firstSeen" nillable="true" type="xs:string" />
+      <xs:element name="lastSeen" nillable="true" type="xs:string" />
+      <xs:element name="lastUpdated" nillable="true" type="xs:string" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="max" type="xs:double" />
+      <xs:element name="min" type="xs:double" />
+      <xs:element name="minInterval" type="xs:int" />
+      <xs:element name="product" nillable="true" type="xs:string" />
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+      <xs:element name="statCode" nillable="true" type="xs:string" />
+      <xs:element name="statDisplayName" nillable="true" type="xs:string" />
+      <xs:element name="status" nillable="true" type="xs:string" />
+      <xs:element name="sum" type="xs:double" />
+      <xs:element name="valueUsed" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AggStatsRecord" nillable="true" type="tns:AggStatsRecord" />
+  <xs:complexType name="GetLocationStatDumpRequest">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getStatList" nillable="true" type="q5:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="locationid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDumpRequest" nillable="true" type="tns:GetLocationStatDumpRequest" />
+  <xs:complexType name="GetLocationStatDumpResponse">
+    <xs:sequence>
+      <xs:element name="locationInfo" nillable="true" type="tns:LocationInfo" />
+      <xs:element name="stats" nillable="true" type="tns:ArrayOfGetStatsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatDumpResponse" nillable="true" type="tns:GetLocationStatDumpResponse" />
+  <xs:complexType name="ArrayOfGetStatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetStatsResponse" nillable="true" type="tns:GetStatsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetStatsResponse" nillable="true" type="tns:ArrayOfGetStatsResponse" />
+  <xs:complexType name="GetLocationStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="beginStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="locationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="minInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="onlyWarningAndCritical" type="xs:boolean" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="snapReqDateToInterval" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatusRequest" nillable="true" type="tns:GetLocationStatusRequest" />
+  <xs:complexType name="GetLocationStatusResponse">
+    <xs:sequence>
+      <xs:element name="beginStartPeriod" nillable="true" type="xs:string" />
+      <xs:element name="currentMinInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="endStartPeriod" nillable="true" type="xs:string" />
+      <xs:element name="locationStatusesForAllIntervals" nillable="true" type="tns:ArrayOfGetLocationStatusByInterval" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatusResponse" nillable="true" type="tns:GetLocationStatusResponse" />
+  <xs:complexType name="ArrayOfGetLocationStatusByInterval">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLocationStatusByInterval" nillable="true" type="tns:GetLocationStatusByInterval" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLocationStatusByInterval" nillable="true" type="tns:ArrayOfGetLocationStatusByInterval" />
+  <xs:complexType name="GetLocationStatusByInterval">
+    <xs:sequence>
+      <xs:element name="locationStatusesForAllLocations" nillable="true" type="tns:ArrayOfGetLocationStatusByLocation" />
+      <xs:element name="minInterval" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatusByInterval" nillable="true" type="tns:GetLocationStatusByInterval" />
+  <xs:complexType name="ArrayOfGetLocationStatusByLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLocationStatusByLocation" nillable="true" type="tns:GetLocationStatusByLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLocationStatusByLocation" nillable="true" type="tns:ArrayOfGetLocationStatusByLocation" />
+  <xs:complexType name="GetLocationStatusByLocation">
+    <xs:sequence>
+      <xs:element name="address" nillable="true" type="xs:string" />
+      <xs:element name="city" nillable="true" type="xs:string" />
+      <xs:element name="country" nillable="true" type="xs:string" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="locationStatusesForAllPeriods" nillable="true" type="tns:ArrayOfLocationStatusRecord" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLocationStatusByLocation" nillable="true" type="tns:GetLocationStatusByLocation" />
+  <xs:complexType name="ArrayOfLocationStatusRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationStatusRecord" nillable="true" type="tns:LocationStatusRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationStatusRecord" nillable="true" type="tns:ArrayOfLocationStatusRecord" />
+  <xs:complexType name="LocationStatusRecord">
+    <xs:sequence>
+      <xs:element name="criticalCount" type="xs:int" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="maxAggCount" type="xs:int" />
+      <xs:element name="minInterval" type="xs:int" />
+      <xs:element name="normalCount" type="xs:int" />
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+      <xs:element name="warningCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationStatusRecord" nillable="true" type="tns:LocationStatusRecord" />
+  <xs:complexType name="GetAggStatMetadataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAggStatMetadataRequest" nillable="true" type="tns:GetAggStatMetadataRequest" />
+  <xs:complexType name="GetAggStatMetadataResponse">
+    <xs:sequence>
+      <xs:element name="currentMinInterval" type="xs:int" />
+      <xs:element name="metadata" nillable="true" type="tns:ArrayOfAggStatMetadataRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAggStatMetadataResponse" nillable="true" type="tns:GetAggStatMetadataResponse" />
+  <xs:complexType name="ArrayOfAggStatMetadataRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AggStatMetadataRecord" nillable="true" type="tns:AggStatMetadataRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAggStatMetadataRecord" nillable="true" type="tns:ArrayOfAggStatMetadataRecord" />
+  <xs:complexType name="AggStatMetadataRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="criticalHi" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="criticalLo" nillable="true" type="xs:double" />
+      <xs:element name="enable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statCode" nillable="true" type="xs:string" />
+      <xs:element name="valueUsing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="warningHi" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="warningLo" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AggStatMetadataRecord" nillable="true" type="tns:AggStatMetadataRecord" />
+  <xs:complexType name="SetAggStatMetadataRequest">
+    <xs:sequence>
+      <xs:element name="metadata" nillable="true" type="tns:ArrayOfAggStatMetadataRecord" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetAggStatMetadataRequest" nillable="true" type="tns:SetAggStatMetadataRequest" />
+  <xs:complexType name="GetCriticalUsersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="beginStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endStartPeriod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="installGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="locationID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="machineGuid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="minInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="snapReqDateToInterval" type="xs:boolean" />
+      <xs:element minOccurs="0" name="statCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCriticalUsersRequest" nillable="true" type="tns:GetCriticalUsersRequest" />
+  <xs:complexType name="GetCriticalUsersResponse">
+    <xs:sequence>
+      <xs:element name="criticalUsers" nillable="true" type="tns:ArrayOfCriticalUsersRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCriticalUsersResponse" nillable="true" type="tns:GetCriticalUsersResponse" />
+  <xs:complexType name="ArrayOfCriticalUsersRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CriticalUsersRecord" nillable="true" type="tns:CriticalUsersRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCriticalUsersRecord" nillable="true" type="tns:ArrayOfCriticalUsersRecord" />
+  <xs:complexType name="CriticalUsersRecord">
+    <xs:sequence>
+      <xs:element name="firstName" nillable="true" type="xs:string" />
+      <xs:element name="installGuid" nillable="true" type="xs:string" />
+      <xs:element name="lastName" nillable="true" type="xs:string" />
+      <xs:element name="lastUpdated" nillable="true" type="xs:string" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="machineGuid" nillable="true" type="xs:string" />
+      <xs:element name="minInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+      <xs:element name="statCode" nillable="true" type="xs:string" />
+      <xs:element name="status" nillable="true" type="xs:string" />
+      <xs:element name="uuid" nillable="true" type="xs:string" />
+      <xs:element name="value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CriticalUsersRecord" nillable="true" type="tns:CriticalUsersRecord" />
+  <xs:complexType name="GetTop100LocationAtRiskRequest">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="locationScope" type="q6:KeyValuePairOfintstring" />
+      <xs:element minOccurs="0" name="onlyWarningAndCritical" type="xs:boolean" />
+      <xs:element name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="snapReqDateToInterval" type="xs:boolean" />
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetTop100LocationAtRiskRequest" nillable="true" type="tns:GetTop100LocationAtRiskRequest" />
+  <xs:complexType name="GetTop100LocationAtRiskResponse">
+    <xs:sequence>
+      <xs:element name="currentMinInterval" type="xs:int" />
+      <xs:element name="locationStatus" nillable="true" type="tns:ArrayOfOnePeriodLocationStatusRecord" />
+      <xs:element name="startPeriod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetTop100LocationAtRiskResponse" nillable="true" type="tns:GetTop100LocationAtRiskResponse" />
+  <xs:complexType name="ArrayOfOnePeriodLocationStatusRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OnePeriodLocationStatusRecord" nillable="true" type="tns:OnePeriodLocationStatusRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOnePeriodLocationStatusRecord" nillable="true" type="tns:ArrayOfOnePeriodLocationStatusRecord" />
+  <xs:complexType name="OnePeriodLocationStatusRecord">
+    <xs:sequence>
+      <xs:element name="address" nillable="true" type="xs:string" />
+      <xs:element name="city" nillable="true" type="xs:string" />
+      <xs:element name="country" nillable="true" type="xs:string" />
+      <xs:element name="criticalCount" type="xs:int" />
+      <xs:element name="locationID" nillable="true" type="xs:string" />
+      <xs:element name="maxAggCount" type="xs:int" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+      <xs:element name="normalCount" type="xs:int" />
+      <xs:element name="warningCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OnePeriodLocationStatusRecord" nillable="true" type="tns:OnePeriodLocationStatusRecord" />
+  <xs:complexType name="GetTestIDRequest">
+    <xs:sequence>
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeStamp" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetTestIDRequest" nillable="true" type="tns:GetTestIDRequest" />
+</xs:schema>

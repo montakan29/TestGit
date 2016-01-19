@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.AccountHierarchyService_2" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="UserDetails" nillable="true" type="q1:ArrayOfKeyValuePairOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="UserInfoReq">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fields" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfoReq" nillable="true" type="tns:UserInfoReq" />
+  <xs:complexType name="GetUserInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OperationSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserInfo" nillable="true" type="tns:UserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUserInfoResponse" nillable="true" type="tns:GetUserInfoResponse" />
+  <xs:complexType name="UsersInfoReq">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fields" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uuids" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsersInfoReq" nillable="true" type="tns:UsersInfoReq" />
+  <xs:complexType name="ArrayOfUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserInfo" nillable="true" type="tns:UserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserInfo" nillable="true" type="tns:ArrayOfUserInfo" />
+  <xs:complexType name="PreferenceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="preferences" nillable="true" type="tns:ArrayOfsetPreference" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreferenceInfo" nillable="true" type="tns:PreferenceInfo" />
+  <xs:complexType name="ArrayOfsetPreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="setPreference" nillable="true" type="tns:setPreference" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfsetPreference" nillable="true" type="tns:ArrayOfsetPreference" />
+  <xs:complexType name="setPreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prefName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="setPreference" nillable="true" type="tns:setPreference" />
+  <xs:complexType name="CheckUserScopeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AAAServiceCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CheckLocationUUID" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LocationID" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="LoginUUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckUserScopeRequest" nillable="true" type="tns:CheckUserScopeRequest" />
+  <xs:complexType name="CheckUserScopeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.AccountHierarchyService_2" minOccurs="0" name="UserScope" nillable="true" type="q7:ArrayOfLocationScopeResultInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheckUserScopeResponse" nillable="true" type="tns:CheckUserScopeResponse" />
+  <xs:complexType name="UserPreferencesReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="preferences" nillable="true" type="tns:ArrayOfpreference" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserPreferencesReq" nillable="true" type="tns:UserPreferencesReq" />
+  <xs:complexType name="ArrayOfpreference">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="preference" nillable="true" type="tns:preference" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfpreference" nillable="true" type="tns:ArrayOfpreference" />
+  <xs:complexType name="preference">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="defaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prefName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="preference" nillable="true" type="tns:preference" />
+  <xs:complexType name="UsersPreferencesReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="preferences" nillable="true" type="tns:ArrayOfpreference" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uuids" nillable="true" type="q8:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsersPreferencesReq" nillable="true" type="tns:UsersPreferencesReq" />
+  <xs:complexType name="ArrayOfPreferenceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreferenceInfo" nillable="true" type="tns:PreferenceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreferenceInfo" nillable="true" type="tns:ArrayOfPreferenceInfo" />
+  <xs:complexType name="UserPreferencesSetReq">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="preferences" nillable="true" type="tns:ArrayOfsetPreference" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserPreferencesSetReq" nillable="true" type="tns:UserPreferencesSetReq" />
+  <xs:complexType name="FindUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="tns:FindUserFilter" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="LocationScope" type="q9:KeyValuePairOfFindLocationFilterstringKr1DPXTk" />
+      <xs:element minOccurs="0" name="ReturnCount" nillable="true" type="xs:int" />
+      <xs:element name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UseEikonLogin" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindUserRequest" nillable="true" type="tns:FindUserRequest" />
+  <xs:simpleType name="FindUserFilter">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="EmployeesOnly" />
+      <xs:enumeration value="ClientsOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FindUserFilter" nillable="true" type="tns:FindUserFilter" />
+  <xs:simpleType name="FindLocationFilter">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="LOC" />
+      <xs:enumeration value="LGL" />
+      <xs:enumeration value="ULT" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FindLocationFilter" nillable="true" type="tns:FindLocationFilter" />
+  <xs:complexType name="FindUserResponse">
+    <xs:sequence>
+      <xs:element name="Users" nillable="true" type="tns:ArrayOfFindUserEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindUserResponse" nillable="true" type="tns:FindUserResponse" />
+  <xs:complexType name="ArrayOfFindUserEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FindUserEntity" nillable="true" type="tns:FindUserEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFindUserEntity" nillable="true" type="tns:ArrayOfFindUserEntity" />
+  <xs:complexType name="FindUserEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEmployee" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NearestLegalEntityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UltimateParentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindUserEntity" nillable="true" type="tns:FindUserEntity" />
+  <xs:complexType name="FindLocationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="tns:FindLocationFilter" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="LocationScope" type="q10:KeyValuePairOfFindLocationFilterstringKr1DPXTk" />
+      <xs:element minOccurs="0" name="ReturnCount" nillable="true" type="xs:int" />
+      <xs:element name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindLocationRequest" nillable="true" type="tns:FindLocationRequest" />
+  <xs:complexType name="FindLocationResponse">
+    <xs:sequence>
+      <xs:element name="Locations" nillable="true" type="tns:ArrayOfFindLocationEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindLocationResponse" nillable="true" type="tns:FindLocationResponse" />
+  <xs:complexType name="ArrayOfFindLocationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FindLocationEntity" nillable="true" type="tns:FindLocationEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFindLocationEntity" nillable="true" type="tns:ArrayOfFindLocationEntity" />
+  <xs:complexType name="FindLocationEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NearestLegalEntityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UltimateParentId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindLocationEntity" nillable="true" type="tns:FindLocationEntity" />
+  <xs:complexType name="FindUniversalRequest">
+    <xs:sequence>
+      <xs:element name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="locationFilter" nillable="true" type="tns:FindLocationFilter" />
+      <xs:element minOccurs="0" name="userFilter" nillable="true" type="tns:FindUserFilter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindUniversalRequest" nillable="true" type="tns:FindUniversalRequest" />
+  <xs:complexType name="FindUniversalResponse">
+    <xs:sequence>
+      <xs:element name="Locations" nillable="true" type="tns:ArrayOfFindLocationEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Users" nillable="true" type="tns:ArrayOfFindUserEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindUniversalResponse" nillable="true" type="tns:FindUniversalResponse" />
+  <xs:complexType name="LocationInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LocationAccountId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationInfoRequest" nillable="true" type="tns:LocationInfoRequest" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NearestLegalEntityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UltimateParentId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="ArrayOfLocationInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationInfoRequest" nillable="true" type="tns:LocationInfoRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationInfoRequest" nillable="true" type="tns:ArrayOfLocationInfoRequest" />
+  <xs:complexType name="ArrayOfLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Location" nillable="true" type="tns:Location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocation" nillable="true" type="tns:ArrayOfLocation" />
+  <xs:complexType name="FindMachineRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="tns:FindMachineFilter" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="LocationScope" type="q11:KeyValuePairOfFindLocationFilterstringKr1DPXTk" />
+      <xs:element minOccurs="0" name="ReturnCount" nillable="true" type="xs:int" />
+      <xs:element name="SearchString" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindMachineRequest" nillable="true" type="tns:FindMachineRequest" />
+  <xs:simpleType name="FindMachineFilter">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="EmployeesOnly" />
+      <xs:enumeration value="ClientsOnly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FindMachineFilter" nillable="true" type="tns:FindMachineFilter" />
+  <xs:complexType name="FindMachineResponse">
+    <xs:sequence>
+      <xs:element name="Machines" nillable="true" type="tns:ArrayOfFindMachineEntity">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindMachineResponse" nillable="true" type="tns:FindMachineResponse" />
+  <xs:complexType name="ArrayOfFindMachineEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FindMachineEntity" nillable="true" type="tns:FindMachineEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFindMachineEntity" nillable="true" type="tns:ArrayOfFindMachineEntity" />
+  <xs:complexType name="FindMachineEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEmployee" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationAccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MachineID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NearestLegalEntityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UltimateParentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FindMachineEntity" nillable="true" type="tns:FindMachineEntity" />
+  <xs:complexType name="MachineInfoReq">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fields" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachineInfoReq" nillable="true" type="tns:MachineInfoReq" />
+  <xs:complexType name="GetMachineInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MachineInfo" nillable="true" type="tns:MachineInfo" />
+      <xs:element minOccurs="0" name="OperationSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMachineInfoResponse" nillable="true" type="tns:GetMachineInfoResponse" />
+  <xs:complexType name="MachineInfo">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="MachineDetails" nillable="true" type="q13:ArrayOfKeyValuePairOfstringstring" />
+      <xs:element minOccurs="0" name="UUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MachineInfo" nillable="true" type="tns:MachineInfo" />
+</xs:schema>

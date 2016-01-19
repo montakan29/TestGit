@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Entities.PerfConsole" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Entities.PerfConsole" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SendPerfLogRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="content" nillable="true" type="q1:ArrayOfunsignedByte" />
+      <xs:element name="fileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendPerfLogRequest" nillable="true" type="tns:SendPerfLogRequest" />
+  <xs:complexType name="SendPerfLogResponse">
+    <xs:sequence>
+      <xs:element name="description" nillable="true" type="xs:string" />
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendPerfLogResponse" nillable="true" type="tns:SendPerfLogResponse" />
+  <xs:complexType name="GetStatNamesRequest">
+    <xs:sequence>
+      <xs:element name="installGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStatNamesRequest" nillable="true" type="tns:GetStatNamesRequest" />
+  <xs:complexType name="GetStatNamesResponse">
+    <xs:sequence>
+      <xs:element name="email" nillable="true" type="xs:string" />
+      <xs:element name="firstName" nillable="true" type="xs:string" />
+      <xs:element name="hostName" nillable="true" type="xs:string" />
+      <xs:element name="lastName" nillable="true" type="xs:string" />
+      <xs:element name="statNames" nillable="true" type="tns:ArrayOfStatName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetStatNamesResponse" nillable="true" type="tns:GetStatNamesResponse" />
+  <xs:complexType name="ArrayOfStatName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatName" nillable="true" type="tns:StatName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatName" nillable="true" type="tns:ArrayOfStatName" />
+  <xs:complexType name="StatName">
+    <xs:sequence>
+      <xs:element name="componentID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lastValue" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="perfCounterID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatName" nillable="true" type="tns:StatName" />
+  <xs:complexType name="GetHistoricalStatsRequest">
+    <xs:sequence>
+      <xs:element name="componentId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="installGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="machineGuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="perfCounterId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="product" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="uuid" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHistoricalStatsRequest" nillable="true" type="tns:GetHistoricalStatsRequest" />
+  <xs:complexType name="GetHistoricalStatsResponse">
+    <xs:sequence>
+      <xs:element name="historicalStats" nillable="true" type="tns:ArrayOfHistoricalStatItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetHistoricalStatsResponse" nillable="true" type="tns:GetHistoricalStatsResponse" />
+  <xs:complexType name="ArrayOfHistoricalStatItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistoricalStatItem" nillable="true" type="tns:HistoricalStatItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistoricalStatItem" nillable="true" type="tns:ArrayOfHistoricalStatItem" />
+  <xs:complexType name="HistoricalStatItem">
+    <xs:sequence>
+      <xs:element name="maxValue" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="minValue" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startTime" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statCount" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="statValue" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="stdDev" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HistoricalStatItem" nillable="true" type="tns:HistoricalStatItem" />
+  <xs:complexType name="PushPerfStatRequest">
+    <xs:sequence>
+      <xs:element name="perfItem" nillable="true" type="tns:ArrayOfPerfLogItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PushPerfStatRequest" nillable="true" type="tns:PushPerfStatRequest" />
+  <xs:complexType name="ArrayOfPerfLogItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PerfLogItem" nillable="true" type="tns:PerfLogItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPerfLogItem" nillable="true" type="tns:ArrayOfPerfLogItem" />
+  <xs:complexType name="PerfLogItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlainData" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfLogItem" nillable="true" type="tns:PerfLogItem" />
+  <xs:complexType name="PushPerfStatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PushPerfStatResponse" nillable="true" type="tns:PushPerfStatResponse" />
+  <xs:complexType name="PerfFlipQueueStateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfFlipQueueStateRequest" nillable="true" type="tns:PerfFlipQueueStateRequest" />
+  <xs:complexType name="PerfFlipQueueStateResponse">
+    <xs:sequence>
+      <xs:element name="windowSizeAvailable" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PerfFlipQueueStateResponse" nillable="true" type="tns:PerfFlipQueueStateResponse" />
+</xs:schema>

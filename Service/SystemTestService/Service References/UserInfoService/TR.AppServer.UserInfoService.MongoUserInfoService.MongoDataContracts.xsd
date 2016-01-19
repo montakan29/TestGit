@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ResponseOfEikonUserInfo">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EikonUserInfo" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" minOccurs="0" name="List" nillable="true" type="q1:ArrayOfEikonUserInfo" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfEikonUserInfo" nillable="true" type="tns:ResponseOfEikonUserInfo" />
+  <xs:complexType name="ResponseOfLdapUserInfo">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LdapUserInfo" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" minOccurs="0" name="List" nillable="true" type="q2:ArrayOfLdapUserInfo" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfLdapUserInfo" nillable="true" type="tns:ResponseOfLdapUserInfo" />
+  <xs:complexType name="ResponseOfUsers">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Users" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData" minOccurs="0" name="List" nillable="true" type="q3:ArrayOfUsers" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfUsers" nillable="true" type="tns:ResponseOfUsers" />
+  <xs:complexType name="ResponseOfstring">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ResponseOf{0}" Namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="string" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="List" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseOfstring" nillable="true" type="tns:ResponseOfstring" />
+</xs:schema>

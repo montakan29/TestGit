@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.DataContract" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Common" />
+  <xs:element name="GetUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserInfoResult" nillable="true" type="q1:UserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q2:UserInfoReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserInfoReqResult" nillable="true" type="q3:UserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoReq2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q4:UserInfoReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserInfoReq2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserInfoReq2Result" nillable="true" type="q5:GetUserInfoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersInfoReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q6:UsersInfoReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersInfoReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUsersInfoReqResult" nillable="true" type="q7:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="emails" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUsersByEmailResult" nillable="true" type="q9:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserPreferencesResult" nillable="true" type="q10:PreferenceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserScope">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q11:CheckUserScopeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserScopeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserScopeResult" nillable="true" type="q12:CheckUserScopeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferencesReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q13:UserPreferencesReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferencesReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUserPreferencesReqResult" nillable="true" type="q14:PreferenceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersPreferencesReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q15:UsersPreferencesReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersPreferencesReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetUsersPreferencesReqResult" nillable="true" type="q16:ArrayOfPreferenceInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPreferencesReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q17:UserPreferencesSetReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUserPreferencesReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetUserPreferencesReqResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q18:FindUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="FindUserResult" nillable="true" type="q19:FindUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q20:FindLocationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="FindLocationResult" nillable="true" type="q21:FindLocationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUsersAndLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q22:FindUniversalRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindUsersAndLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="FindUsersAndLocationsResult" nillable="true" type="q23:FindUniversalResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q24:LocationInfoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetLocationResult" nillable="true" type="q25:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q26:ArrayOfLocationInfoRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetLocationsResult" nillable="true" type="q27:ArrayOfLocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q28:FindMachineRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindMachineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="FindMachineResult" nillable="true" type="q29:FindMachineResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMachineInfoReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="req" nillable="true" type="q30:MachineInfoReq" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMachineInfoReqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" minOccurs="0" name="GetMachineInfoReqResult" nillable="true" type="q31:GetMachineInfoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEikonUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" minOccurs="0" name="eikonUserInfo" nillable="true" type="q32:EikonUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEikonUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="UpdateEikonUserInfoResult" nillable="true" type="q33:ResponseOfEikonUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEikonUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.DataContract" minOccurs="0" name="userFilter" nillable="true" type="q34:UserFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEikonUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="GetEikonUserInfoResult" nillable="true" type="q35:ResponseOfEikonUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLdapUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLdapUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="GetLdapUserResult" nillable="true" type="q36:ResponseOfLdapUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAAAUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAAAUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="GetAAAUserResult" nillable="true" type="q37:ResponseOfUsers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersManager">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.DataContract" minOccurs="0" name="userFilter" nillable="true" type="q38:UserFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersManagerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="GetUsersManagerResult" nillable="true" type="q39:ResponseOfLdapUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetEikonUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Common" minOccurs="0" name="contextInfo" nillable="true" type="q40:ContextInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetEikonUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" minOccurs="0" name="ResetEikonUserPasswordResult" nillable="true" type="q41:ResponseOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

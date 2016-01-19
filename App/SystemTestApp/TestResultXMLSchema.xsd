@@ -1,0 +1,222 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:t="http://www.reuters.com/rst" targetNamespace="http://www.reuters.com/rst" elementFormDefault="qualified">
+  <xsd:complexType name="ComponentType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+        <xsd:attribute name="version" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MultiLanguageType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="lang" type="xsd:language" default="en" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="rstTestGroupType">
+    <xsd:simpleContent>
+      <xsd:extension base="t:MandatoryString">
+        <xsd:attribute name="id" type="t:MandatoryString" use="required" />
+        <xsd:attribute name="lang" type="xsd:language" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:element name="rstResult">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="xsd:anyType">
+          <xsd:sequence>
+            <xsd:element name="testID" type="xsd:long" minOccurs="0" />
+            <xsd:element name="userProfile" minOccurs="0">
+              <xsd:complexType>
+                <xsd:complexContent>
+                  <xsd:restriction base="xsd:anyType">
+                    <xsd:sequence>
+                      <xsd:element name="UUID" type="t:MandatoryString" />
+                      <xsd:element name="accountDomain" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="userName" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="email" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="contactName" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="location" minOccurs="0">
+                        <xsd:complexType>
+                          <xsd:simpleContent>
+                            <xsd:extension base="xsd:string">
+                              <xsd:attribute name="CID" type="xsd:string" />
+                            </xsd:extension>
+                          </xsd:simpleContent>
+                        </xsd:complexType>
+                      </xsd:element>
+                      <xsd:element name="country" minOccurs="0">
+                        <xsd:complexType>
+                          <xsd:simpleContent>
+                            <xsd:extension base="xsd:string">
+                              <xsd:attribute name="CID" type="xsd:string" />
+                            </xsd:extension>
+                          </xsd:simpleContent>
+                        </xsd:complexType>
+                      </xsd:element>
+                      <xsd:element name="global" minOccurs="0">
+                        <xsd:complexType>
+                          <xsd:simpleContent>
+                            <xsd:extension base="xsd:string">
+                              <xsd:attribute name="CID" type="xsd:string" />
+                            </xsd:extension>
+                          </xsd:simpleContent>
+                        </xsd:complexType>
+                      </xsd:element>
+                      <xsd:element name="geoRegion" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="geoSubRegion" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="geoCountry" type="xsd:string" minOccurs="0" />
+                    </xsd:sequence>
+                  </xsd:restriction>
+                </xsd:complexContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="server" minOccurs="0">
+              <xsd:complexType>
+                <xsd:complexContent>
+                  <xsd:restriction base="xsd:anyType">
+                    <xsd:sequence>
+                      <xsd:element name="dataCenter" type="xsd:string" minOccurs="0" />
+                      <xsd:element name="wasDateTime" type="t:DateTimeType" minOccurs="0" />
+                      <xsd:element name="dbsDateTime" type="t:DateTimeType" minOccurs="0" />
+                    </xsd:sequence>
+                    <xsd:attribute name="name" type="xsd:string" use="required" />
+                    <xsd:attribute name="version" type="xsd:string" use="required" />
+                    <xsd:attribute name="compName" type="xsd:string" />
+                  </xsd:restriction>
+                </xsd:complexContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="client" type="t:ComponentType" />
+            <xsd:element name="product" type="t:ComponentType" />
+            <xsd:element name="machineID" type="xsd:string" />
+            <xsd:element name="runningMode" type="t:MandatoryString" />
+            <xsd:element name="hasResultValue" type="t:TrueOfFalse" default="true" />
+            <xsd:element name="localDateTime" type="xsd:string" />
+            <xsd:element name="requestXMLString" type="xsd:string" minOccurs="0" />
+            <xsd:element name="testedLanguage" type="xsd:language" minOccurs="0" default="en" />
+            <xsd:element name="refID" minOccurs="0" maxOccurs="unbounded" nillable="true">
+              <xsd:complexType>
+                <xsd:simpleContent>
+                  <xsd:extension base="xsd:string">
+                    <xsd:attribute name="round" type="xsd:int" />
+                    <xsd:attribute name="leftRounds" type="xsd:int" />
+                  </xsd:extension>
+                </xsd:simpleContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="testGroups" minOccurs="0">
+              <xsd:complexType>
+                <xsd:complexContent>
+                  <xsd:restriction base="xsd:anyType">
+                    <xsd:sequence>
+                      <xsd:element name="testGroup" type="t:rstTestGroupType" minOccurs="0" maxOccurs="unbounded" />
+                    </xsd:sequence>
+                  </xsd:restriction>
+                </xsd:complexContent>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="testCases" minOccurs="0">
+              <xsd:complexType>
+                <xsd:complexContent>
+                  <xsd:restriction base="xsd:anyType">
+                    <xsd:sequence>
+                      <xsd:element name="testCase" type="t:rstTestCaseType" minOccurs="0" maxOccurs="unbounded" />
+                    </xsd:sequence>
+                  </xsd:restriction>
+                </xsd:complexContent>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="rstTestCaseType">
+    <xsd:complexContent>
+      <xsd:restriction base="xsd:anyType">
+        <xsd:sequence>
+          <xsd:element name="title" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:restriction base="t:MultiLanguageType">
+                  <xsd:minLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="group" type="t:MandatoryString" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element name="valid" type="xsd:string" />
+          <xsd:element name="ovalid" type="xsd:string" minOccurs="0" />
+          <xsd:element name="value" type="xsd:string" minOccurs="0" />
+          <xsd:element name="description" type="t:MultiLanguageType" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element name="recommendation" type="t:MultiLanguageType" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element name="orecommendation" type="t:MultiLanguageType" minOccurs="0" maxOccurs="unbounded" />
+          <xsd:element name="object" type="xsd:string" minOccurs="0" />
+          <xsd:element name="rphURL" type="xsd:string" minOccurs="0" />
+          <xsd:element name="resultID" type="t:MandatoryString" minOccurs="0" />
+          <xsd:element name="measurement" minOccurs="0">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="unit" type="xsd:string" use="required" />
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="hasTroubleShootingTests" minOccurs="0">
+            <xsd:complexType>
+              <xsd:complexContent>
+                <xsd:restriction base="xsd:anyType">
+                  <xsd:sequence>
+                    <xsd:element name="testID" type="t:MandatoryString" maxOccurs="unbounded" />
+                  </xsd:sequence>
+                </xsd:restriction>
+              </xsd:complexContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="t:MandatoryString" use="required" />
+        <xsd:attribute name="type">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="normal" />
+              <xsd:enumeration value="troubleshooting" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+        <xsd:attribute name="shouldBeRerun" type="t:TrueOfFalse" />
+        <xsd:attribute name="ssiID" type="xsd:long" />
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DateTimeType">
+    <xsd:restriction base="t:MandatoryString">
+      <xsd:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}[+\-]?\p{Nd}{2}:\p{Nd}{2}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="GUIDType">
+    <xsd:restriction base="t:MandatoryString">
+      <xsd:pattern value="([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\})" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MandatoryString">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RDFIDType">
+    <xsd:restriction base="t:MandatoryString">
+      <xsd:pattern value="#.+" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TrueOfFalse">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="0" />
+      <xsd:enumeration value="true" />
+      <xsd:enumeration value="false" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

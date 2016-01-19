@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.NetNamedPipeBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;NetNamedPipeBinding_IAppHits&quot; transferMode=&quot;Streamed&quot;&gt;&lt;security mode=&quot;None&quot; /&gt;&lt;/Data&gt;" bindingType="netNamedPipeBinding" name="NetNamedPipeBinding_IAppHits" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://apphitsservice/a59ca600-9e30-4a0d-a101-c7b86a1653ea&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IAppHits&quot; contract=&quot;AppHitsService.IAppHits&quot; name=&quot;NetNamedPipeBinding_IAppHits&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://apphitsservice/a59ca600-9e30-4a0d-a101-c7b86a1653ea&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IAppHits&quot; contract=&quot;AppHitsService.IAppHits&quot; name=&quot;NetNamedPipeBinding_IAppHits&quot; /&gt;" contractName="AppHitsService.IAppHits" name="NetNamedPipeBinding_IAppHits" />
+  </endpoints>
+</configurationSnapshot>

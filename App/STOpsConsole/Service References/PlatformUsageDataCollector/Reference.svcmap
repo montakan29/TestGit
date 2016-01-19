@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f554470a-8e13-45d0-99ac-97f6ffef4c57" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ArrayList" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.pipe://localhost/PlatformUsageDataCollector/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ffba0330-5abb-4848-b280-afed7f7dfd76" SourceId="1" SourceUrl="net.pipe://localhost/PlatformUsageDataCollector/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4cbf56a1-4540-4b1e-892c-a61f6f57665d" SourceId="1" SourceUrl="net.pipe://localhost/PlatformUsageDataCollector/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="83d20888-5753-4f89-83de-3410e3645e3a" SourceId="1" SourceUrl="net.pipe://localhost/PlatformUsageDataCollector/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="ca3560cf-4028-49ef-a3d8-80a3cef6ec0f" SourceId="1" SourceUrl="net.pipe://localhost/PlatformUsageDataCollector/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

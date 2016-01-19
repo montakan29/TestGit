@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6c47039e-1aa1-43a6-984c-596d01cb07d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8989/UserInfoService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="698f6650-e507-4907-91e6-156997c3cb5c" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c31221fd-1737-4626-9cfb-79e6bbe1c119" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6088ef80-d7c1-41ea-8651-3e6b3c21946a" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.Data.xsd" MetadataType="Schema" ID="9761911f-466e-4a36-8813-7abf00908755" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="System.Collections.Generic.xsd" MetadataType="Schema" ID="d002f6fd-168a-4427-acb6-867bf25418cc" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="9fb8e78d-b5a4-4cdf-9517-be6b8dedc703" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.AccountHierarchyService_2.xsd" MetadataType="Schema" ID="5319ced8-57a7-4c45-ad73-82c1d88ffc47" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="System.ComponentModel.xsd" MetadataType="Schema" ID="cd0faca0-18e3-43f2-abe6-0a93aa470992" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="5205ffc2-46dc-4007-98a5-067cc5056c6a" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoServiceMongo.Database.MongodbData.xsd" MetadataType="Schema" ID="5eb6161d-0007-46ec-8be3-7e744f7a91b1" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts.xsd" MetadataType="Schema" ID="8d8b5464-7ff4-409b-9637-b0f7de0c660d" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.MongoUserInfoService.DataContract.xsd" MetadataType="Schema" ID="46bba2bb-259e-495a-a142-675b75288929" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData.xsd" MetadataType="Schema" ID="9b6a8679-1fa5-4a08-8ea0-9c488053c753" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="MongoDB.Bson.xsd" MetadataType="Schema" ID="75753ab1-9807-4693-a6e4-108f5f1b275a" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+    <MetadataFile FileName="TR.AppServer.UserInfoService.MongoUserInfoService.Common.xsd" MetadataType="Schema" ID="0631656e-0cdd-4bf2-a375-bf1fd4c6ccc6" SourceId="1" SourceUrl="http://localhost:8989/UserInfoService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
