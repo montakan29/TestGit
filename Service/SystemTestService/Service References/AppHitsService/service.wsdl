@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://thomsonreuters.com/as/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://thomsonreuters.com/as/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://thomsonreuters.com/as/Imports">
+      <xsd:import namespace="http://thomsonreuters.com/as/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://thomsonreuters.com/as/apphits" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAppHits_Process_InputMessage">
+    <wsdl:part name="parameters" element="tns:Process" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_Process_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessSimple_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSimple" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessSimple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStream" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessStreamCompressed_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStreamCompressed" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessStreamCompressed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessStreamCompressedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessAllCompressed_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAllCompressed" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_ProcessAllCompressed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAllCompressedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetQueueDepthConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDepthConfig" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetQueueDepthConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDepthConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_RefreshUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshUser" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_RefreshUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetUserFeatureHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFeatureHistory" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetUserFeatureHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFeatureHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetUserFeatureHistoryStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFeatureHistoryStream" />
+  </wsdl:message>
+  <wsdl:message name="IAppHits_GetUserFeatureHistoryStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFeatureHistoryStreamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAppHits">
+    <wsdl:operation name="Process">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/Process" message="tns:IAppHits_Process_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessResponse" message="tns:IAppHits_Process_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimple">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessSimple" message="tns:IAppHits_ProcessSimple_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessSimpleResponse" message="tns:IAppHits_ProcessSimple_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStream">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessStream" message="tns:IAppHits_ProcessStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessStreamResponse" message="tns:IAppHits_ProcessStream_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessStreamCompressed">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessStreamCompressed" message="tns:IAppHits_ProcessStreamCompressed_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessStreamCompressedResponse" message="tns:IAppHits_ProcessStreamCompressed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAllCompressed">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessAllCompressed" message="tns:IAppHits_ProcessAllCompressed_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/ProcessAllCompressedResponse" message="tns:IAppHits_ProcessAllCompressed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDepthConfig">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetQueueDepthConfig" message="tns:IAppHits_GetQueueDepthConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetQueueDepthConfigResponse" message="tns:IAppHits_GetQueueDepthConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshUser">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/RefreshUser" message="tns:IAppHits_RefreshUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/RefreshUserResponse" message="tns:IAppHits_RefreshUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFeatureHistory">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetUserFeatureHistory" message="tns:IAppHits_GetUserFeatureHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetUserFeatureHistoryResponse" message="tns:IAppHits_GetUserFeatureHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFeatureHistoryStream">
+      <wsdl:input wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetUserFeatureHistoryStream" message="tns:IAppHits_GetUserFeatureHistoryStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://thomsonreuters.com/as/IAppHits/GetUserFeatureHistoryStreamResponse" message="tns:IAppHits_GetUserFeatureHistoryStream_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EikonUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aaaAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="aaaMappings" nillable="true" type="tns:ArrayOfAAAUserMapping" />
+      <xs:element minOccurs="0" name="accountLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createdOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="empType" type="xs:short" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isEditorial" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="userEnvironment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userStatus" type="xs:short" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EikonUserInfo" nillable="true" type="tns:EikonUserInfo" />
+  <xs:complexType name="ArrayOfAAAUserMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AAAUserMapping" nillable="true" type="tns:AAAUserMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAAAUserMapping" nillable="true" type="tns:ArrayOfAAAUserMapping" />
+  <xs:complexType name="AAAUserMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userEnvironment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AAAUserMapping" nillable="true" type="tns:AAAUserMapping" />
+  <xs:complexType name="ArrayOfEikonUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EikonUserInfo" nillable="true" type="tns:EikonUserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEikonUserInfo" nillable="true" type="tns:ArrayOfEikonUserInfo" />
+  <xs:complexType name="ArrayOfLdapUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LdapUserInfo" nillable="true" type="tns:LdapUserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLdapUserInfo" nillable="true" type="tns:ArrayOfLdapUserInfo" />
+  <xs:complexType name="LdapUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="businesscategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="c" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departmentnumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="deprthomshomepostalcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="empType" type="xs:short" />
+      <xs:element minOccurs="0" name="facsimiletelephonenumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="givenname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="l" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="managerEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="managerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="managerUid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="modifytimestamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pager" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postalcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="st" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="telephonenumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsacquisitionemplid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsacquisitionemplidtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbbpin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel1descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel1shortdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel2descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel2shortdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel3descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel3shortdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel4descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel4shortdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel5descr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbulevel5shortdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsbuspartner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomschargeback" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomscompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomscompanydescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomscompanydescroverride" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomscompanyoverride" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomscompanyshortdescroverride" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsdeptid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsflsastatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsglcompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsglloc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomshiredt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomshrbp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomshrbpid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsjobcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsjobcodedescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsjobfamilycode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsjobfamilydescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationcity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationcountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationcountrydescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationpostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationstate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationstatedescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationstreet1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationstreet2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomslocationstreet3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmaildrop" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmgdescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmgdescroverride" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmgoverride" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsmiddle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsnamedisplay" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomspaygroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomspersonalemail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomspreferredmiddleinitial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomspreflastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsprefname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsrecordtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsrecordtypedescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsroleindicator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsroleindicatordescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomssapapprvlamt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomssapcurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsstdhours" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomssupervisorid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomssupervisoriddescr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="thomsworkextension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userEnvironment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LdapUserInfo" nillable="true" type="tns:LdapUserInfo" />
+</xs:schema>

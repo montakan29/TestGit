@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{98AE52CD-46F1-4DBA-AAD7-0FFFC016F3B1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3E4C0392-4689-4CE1-8C20-1CE4D4BA95B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThomsonReuters.Eikon.SystemTest</RootNamespace>
+    <AssemblyName>ThomsonReuters.Eikon.SystemTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <EnableJSDebugging>False</EnableJSDebugging>
+    <!-- The following properties are used by the extension -->
+    <BaseExtensionPath>$(LOCALAPPDATA)</BaseExtensionPath>
+    <AppServerSDKPath>\Microsoft\VisualStudio\12.0\Extensions\4zbpihpt.amv</AppServerSDKPath>
+    <IsAppServerApp>True</IsAppServerApp>
+    <CreatedVersion>1.0.0.11</CreatedVersion>
+    <UpgradedVersion>
+    </UpgradedVersion>
+    <AppServerSchemaVersion>1</AppServerSchemaVersion>
+    <AppEnginePath>Thomson Reuters\Eikon UI Toolkit\Eikon App Engine.appref-ms</AppEnginePath>
+    <AppEngineHostUrl>https://amers1.views.cp.icp2.mpp.reutest.com/TRS/ClickOnce/EikonAppEngine/EikonAppEngine.application</AppEngineHostUrl>
+    <DebuggerAttachTimeout>45</DebuggerAttachTimeout>
+    <AppServersToLaunch>2</AppServersToLaunch>
+    <AppEngineParameters>
+    </AppEngineParameters>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThomsonReuters.Eikon.Toolkit.Interfaces.Shared">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\ThomsonReuters.Eikon.Toolkit.Interfaces.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TR.AppServer.Interfaces">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\TR.AppServer.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Wcf.Routing.Client">
+      <HintPath>C:\EAE\bin\AppServer\AnyCpu\Release\AppServer\DotNet\Wcf.Routing.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Document\Metadata.cs" />
+    <Compile Include="Document\TestResult.cs" />
+    <Compile Include="Document\TestResultForwarder.cs" />
+    <Compile Include="Document\TestResultParser.cs" />
+    <Compile Include="Envs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security.cs" />
+    <Compile Include="Service References\AppHitsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataCollectorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OpsConsoleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TRRConstant.cs" />
+    <Compile Include="WebCallsImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MappingTestResult.xslt">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Schema.json" />
+    <None Include="Service References\AppHitsService\apphits.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\Message.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\service.wsdl" />
+    <None Include="Service References\AppHitsService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\service1.wsdl" />
+    <None Include="Service References\AppHitsService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.Services.AppHits.Entites.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.SystemTest.AppHitsService.QueueDepthConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.SystemTest.AppHitsService.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.SystemTest.AppHitsService.SimpleClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppHitsService\ThomsonReuters.Eikon.SystemTest.AppHitsService.UserFeatureHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataCollectorService\mex.disco" />
+    <None Include="Service References\DataCollectorService\configuration91.svcinfo" />
+    <None Include="Service References\DataCollectorService\configuration.svcinfo" />
+    <None Include="Service References\DataCollectorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DataCollectorService\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCollectorService\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="TestResultXMLSchema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Service References\OpsConsoleService\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.PerfConsole.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service.wsdl" />
+    <None Include="Service References\OpsConsoleService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.EditStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.FlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetAggStatMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetCriticalUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetHistoricalStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetLocationInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetLocationStatDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetLocationStatDumpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetLocationStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetMultiStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetStatNamesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetTop100LocationAtRiskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.GetUserInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.LogStatsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.MachInstInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.MetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.PerfFlipQueueStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.PushPerfStatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OpsConsoleService\ThomsonReuters.Eikon.SystemTest.OpsConsoleService.SendPerfLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="WebCalls.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="dummy.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\AppHitsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AppHitsService\configuration.svcinfo" />
+    <None Include="Service References\AppHitsService\configuration91.svcinfo" />
+    <None Include="Service References\OpsConsoleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\OpsConsoleService\configuration.svcinfo" />
+    <None Include="Service References\OpsConsoleService\configuration91.svcinfo" />
+    <EmbeddedResource Include="TestSuite.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataCollectorService\DataCollectorService.wsdl" />
+    <None Include="Service References\DataCollectorService\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AppHitsService\" />
+    <WCFMetadataStorage Include="Service References\DataCollectorService\" />
+    <WCFMetadataStorage Include="Service References\OpsConsoleService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://thomsonreuters.com/as/" elementFormDefault="qualified" targetNamespace="http://thomsonreuters.com/as/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://thomsonreuters.com/as/apphits" />
+  <xs:import namespace="http://schemas.microsoft.com/Message" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" />
+  <xs:element name="Process">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://thomsonreuters.com/as/apphits" minOccurs="0" name="request" nillable="true" type="q1:Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://thomsonreuters.com/as/apphits" minOccurs="0" name="ProcessResult" nillable="true" type="q2:Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSimple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://thomsonreuters.com/as/apphits" minOccurs="0" name="sc" nillable="true" type="q3:SimpleClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSimpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://thomsonreuters.com/as/apphits" minOccurs="0" name="ProcessSimpleResult" nillable="true" type="q4:SimpleClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessStream">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://thomsonreuters.com/as/apphits" minOccurs="0" name="req" nillable="true" type="q5:Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessStreamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/Message" name="ProcessStreamResult" type="q6:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessStreamCompressed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://thomsonreuters.com/as/apphits" minOccurs="0" name="req" nillable="true" type="q7:Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessStreamCompressedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/Message" name="ProcessStreamCompressedResult" type="q8:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAllCompressed">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/Message" name="req" type="q9:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAllCompressedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/Message" name="ProcessAllCompressedResult" type="q10:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDepthConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="req" nillable="true" type="q11:QueueDepthConfigRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDepthConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="GetQueueDepthConfigResult" nillable="true" type="q12:QueueDepthConfigResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="req" nillable="true" type="q13:RefreshUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserFeatureHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="req" nillable="true" type="q14:UserFeatureHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserFeatureHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="GetUserFeatureHistoryResult" nillable="true" type="q15:UserFeatureHistoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserFeatureHistoryStream">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ThomsonReuters.Eikon.Services.AppHits.Entites" minOccurs="0" name="req" nillable="true" type="q16:UserFeatureHistoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserFeatureHistoryStreamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/Message" name="GetUserFeatureHistoryStreamResult" type="q17:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

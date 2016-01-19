@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.NetNamedPipeBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;NetNamedPipeBinding_IOpsConsoleService&quot; transferMode=&quot;Streamed&quot;&gt;&lt;security mode=&quot;None&quot; /&gt;&lt;/Data&gt;" bindingType="netNamedPipeBinding" name="NetNamedPipeBinding_IOpsConsoleService" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://opsconsoleservice/b1bac4c9-d3f6-44e8-99ee-98137524f18b&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IOpsConsoleService&quot; contract=&quot;OpsConsoleService.IOpsConsoleService&quot; name=&quot;NetNamedPipeBinding_IOpsConsoleService&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;net.pipe://opsconsoleservice/b1bac4c9-d3f6-44e8-99ee-98137524f18b&quot; binding=&quot;netNamedPipeBinding&quot; bindingConfiguration=&quot;NetNamedPipeBinding_IOpsConsoleService&quot; contract=&quot;OpsConsoleService.IOpsConsoleService&quot; name=&quot;NetNamedPipeBinding_IOpsConsoleService&quot; /&gt;" contractName="OpsConsoleService.IOpsConsoleService" name="NetNamedPipeBinding_IOpsConsoleService" />
+  </endpoints>
+</configurationSnapshot>

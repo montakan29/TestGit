@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserInfoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_IUserInfoService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.Data" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.AccountHierarchyService_2" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoServiceMongo.Database.MongodbData" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.MongoDataContracts" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.DataContract" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Database.MongodbData" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MongoDB.Bson" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/TR.AppServer.UserInfoService.MongoUserInfoService.Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserInfoService_GetUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserInfoReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserInfoReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserInfoReq2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoReq2" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserInfoReq2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserInfoReq2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersInfoReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInfoReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersInfoReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInfoReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserPreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferences" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserPreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserScope_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserScope" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserScope_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserScopeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserPreferencesReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferencesReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUserPreferencesReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferencesReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersPreferencesReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersPreferencesReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersPreferencesReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersPreferencesReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_SetUserPreferencesReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPreferencesReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_SetUserPreferencesReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPreferencesReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindLocation" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindUsersAndLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersAndLocations" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindUsersAndLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindUsersAndLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocation" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocations" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindMachine_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindMachine" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_FindMachine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetMachineInfoReq_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineInfoReq" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetMachineInfoReq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMachineInfoReqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_UpdateEikonUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEikonUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_UpdateEikonUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEikonUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetEikonUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEikonUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetEikonUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEikonUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLdapUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLdapUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetLdapUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLdapUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetAAAUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAAAUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetAAAUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAAAUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersManager_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersManager" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_GetUsersManager_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersManagerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_ResetEikonUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetEikonUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserInfoService_ResetEikonUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetEikonUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserInfoService">
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfo" message="tns:IUserInfoService_GetUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfoResponse" message="tns:IUserInfoService_GetUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfoReq" message="tns:IUserInfoService_GetUserInfoReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfoReqResponse" message="tns:IUserInfoService_GetUserInfoReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoReq2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfoReq2" message="tns:IUserInfoService_GetUserInfoReq2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserInfoReq2Response" message="tns:IUserInfoService_GetUserInfoReq2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInfoReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersInfoReq" message="tns:IUserInfoService_GetUsersInfoReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersInfoReqResponse" message="tns:IUserInfoService_GetUsersInfoReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersByEmail" message="tns:IUserInfoService_GetUsersByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersByEmailResponse" message="tns:IUserInfoService_GetUsersByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreferences">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserPreferences" message="tns:IUserInfoService_GetUserPreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserPreferencesResponse" message="tns:IUserInfoService_GetUserPreferences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserScope">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserScope" message="tns:IUserInfoService_GetUserScope_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserScopeResponse" message="tns:IUserInfoService_GetUserScope_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreferencesReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUserPreferencesReq" message="tns:IUserInfoService_GetUserPreferencesReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUserPreferencesReqResponse" message="tns:IUserInfoService_GetUserPreferencesReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersPreferencesReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersPreferencesReq" message="tns:IUserInfoService_GetUsersPreferencesReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersPreferencesReqResponse" message="tns:IUserInfoService_GetUsersPreferencesReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPreferencesReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/SetUserPreferencesReq" message="tns:IUserInfoService_SetUserPreferencesReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/SetUserPreferencesReqResponse" message="tns:IUserInfoService_SetUserPreferencesReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/FindUser" message="tns:IUserInfoService_FindUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/FindUserResponse" message="tns:IUserInfoService_FindUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/FindLocation" message="tns:IUserInfoService_FindLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/FindLocationResponse" message="tns:IUserInfoService_FindLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersAndLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/FindUsersAndLocations" message="tns:IUserInfoService_FindUsersAndLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/FindUsersAndLocationsResponse" message="tns:IUserInfoService_FindUsersAndLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetLocation" message="tns:IUserInfoService_GetLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetLocationResponse" message="tns:IUserInfoService_GetLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetLocations" message="tns:IUserInfoService_GetLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetLocationsResponse" message="tns:IUserInfoService_GetLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindMachine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/FindMachine" message="tns:IUserInfoService_FindMachine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/FindMachineResponse" message="tns:IUserInfoService_FindMachine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineInfoReq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetMachineInfoReq" message="tns:IUserInfoService_GetMachineInfoReq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetMachineInfoReqResponse" message="tns:IUserInfoService_GetMachineInfoReq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEikonUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/UpdateEikonUserInfo" message="tns:IUserInfoService_UpdateEikonUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/UpdateEikonUserInfoResponse" message="tns:IUserInfoService_UpdateEikonUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEikonUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetEikonUserInfo" message="tns:IUserInfoService_GetEikonUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetEikonUserInfoResponse" message="tns:IUserInfoService_GetEikonUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLdapUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetLdapUser" message="tns:IUserInfoService_GetLdapUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetLdapUserResponse" message="tns:IUserInfoService_GetLdapUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAAAUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetAAAUser" message="tns:IUserInfoService_GetAAAUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetAAAUserResponse" message="tns:IUserInfoService_GetAAAUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersManager">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersManager" message="tns:IUserInfoService_GetUsersManager_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/GetUsersManagerResponse" message="tns:IUserInfoService_GetUsersManager_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetEikonUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserInfoService/ResetEikonUserPassword" message="tns:IUserInfoService_ResetEikonUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserInfoService/ResetEikonUserPasswordResponse" message="tns:IUserInfoService_ResetEikonUserPassword_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetNamedPipeBinding_IUserInfoService" type="tns:IUserInfoService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_IUserInfoService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserInfoReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfoReq2">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserInfoReq2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInfoReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUsersInfoReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByEmail">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUsersByEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreferences">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserPreferences" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserScope">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserScope" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreferencesReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUserPreferencesReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersPreferencesReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUsersPreferencesReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPreferencesReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/SetUserPreferencesReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUser">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/FindUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindLocation">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/FindLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindUsersAndLocations">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/FindUsersAndLocations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetLocations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindMachine">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/FindMachine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMachineInfoReq">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetMachineInfoReq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEikonUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/UpdateEikonUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEikonUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetEikonUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLdapUser">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetLdapUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAAAUser">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetAAAUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersManager">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/GetUsersManager" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetEikonUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/IUserInfoService/ResetEikonUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserInfoService">
+    <wsdl:port name="NetNamedPipeBinding_IUserInfoService" binding="tns:NetNamedPipeBinding_IUserInfoService">
+      <soap12:address location="net.pipe://userinfoservice/3e2d8b9d-69b7-40c6-bd03-d24c640998ef" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://userinfoservice/3e2d8b9d-69b7-40c6-bd03-d24c640998ef</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

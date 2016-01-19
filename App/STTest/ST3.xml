@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rstResult xmlns="http://www.reuters.com/rst">
+  <client name="RST" version="rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.realtime.8.3.8.7505,rstplugin.time-series.8.3.8.7505,rstplugin.time-series.8.3.8.7505,rstplugin.dex2.8.3.8.7505,rstplugin.networking.8.3.8.7505,rstplugin.networking.8.3.8.7505,rstplugin.networking.8.3.8.7505,rstplugin.networking.8.3.8.7505,rstplugin.rdmc.script.8.3.8.7505,rstplugin.provider.8.3.8.7505,rstplugin.prerequisites.video.8.3.8.7505,rstplugin.provider.8.3.8.7505,rstplugin.provider.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.provider.8.3.8.7505,rstplugin.information.misc.8.3.8.7505,rstplugin.rstplugin.prerequisites.vba.8.3.8.7505,rstplugin.information.dotnet.8.3.8.7505,rstplugin.webservices.8.3.8.7505,rstplugin.prerequisites.video.8.3.8.7505,rstplugin.provider.8.3.8.7505,rstplugin.rstm.environment.8.3.8.7505,rstplugin.rstm.default.8.3.8.7505" />
+  <product name="Thomson Reuters Eikon" version="8.3.00503" />
+  <machineID>59CE35A5-2E38-53FD-1AC0-7B9D2114F6C7</machineID>
+  <runningMode>auto</runningMode>
+  <hasResultValue>true</hasResultValue>
+  <localDateTime>2015-10-12T13:59:47+07:00</localDateTime>
+  <requestXMLString>Not Implemented Yet</requestXMLString>
+  <refID />
+  <testGroups>
+    <testGroup id="#group.prerequisites" lang="en">Prerequisites</testGroup>
+    <testGroup id="#group.prerequisites.software" lang="en">Software</testGroup>
+    <testGroup id="#group.prerequisites.hardware" lang="en">Hardware</testGroup>
+    <testGroup id="#group.information" lang="en">Information</testGroup>
+    <testGroup id="#group.information.system" lang="en">Computer Information</testGroup>
+    <testGroup id="#group.product-information" lang="en">Product Information</testGroup>
+    <testGroup id="#group.information.rde" lang="en">Thomson Reuters Settings</testGroup>
+    <testGroup id="#group.updates" lang="en">Update Agent</testGroup>
+    <testGroup id="#group.network" lang="en">Network</testGroup>
+    <testGroup id="#group.serviceAvailability" lang="en">Services Availability</testGroup>
+    <testGroup id="#group.webservices" lang="en">Network Capabilities</testGroup>
+    <testGroup id="#group.realtime" lang="en">Real Time</testGroup>
+    <testGroup id="#group.networking.connected" lang="en">Network Tools</testGroup>
+    <testGroup id="#group.dex2" lang="en">Data Retrieval Engine (DEX2)</testGroup>
+    <testGroup id="#group.tsi" lang="en">Time Series</testGroup>
+    <testGroup id="#group.network.transactions" lang="en">Transaction</testGroup>
+  </testGroups>
+  <testCases>
+    <testCase id="#test.134" type="normal">
+      <title lang="en">WMI Service:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>ok</value>
+      <description lang="en">Available</description>
+      <recommendation lang="en-US">System test can perform checks properly.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=134&amp;lang=en</rphURL>
+      <resultID>#tr.134.ok</resultID>
+    </testCase>
+    <testCase id="#test.9" type="normal">
+      <title lang="en">Operating System:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>Seven_HomeBasicPremium</value>
+      <description lang="en">Windows 7 Home Premium 32-bit</description>
+      <recommendation lang="en-US">Supported: Windows XP Professional (32-bit), Windows Vista (Business, Enterprise, Ultimate), Windows 7 (Home Premium, Professional, Enterprise, Ultimate), Windows 8, Windows Server 2003, Windows Server 2008 R2 (64-bit).</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=9&amp;lang=en</rphURL>
+      <resultID>#tr.9.seven.homebasicpremium</resultID>
+    </testCase>
+    <testCase id="#test.10" type="normal">
+      <title lang="en">Service Pack:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>1</value>
+      <description lang="en">SP1</description>
+      <recommendation lang="en-US">Supported: Windows XP Professional SP3, Windows Vista SP1, Windows 7, Windows 7 SP1, Windows 8, Windows Server 2003 SP1 or SP2 + Fix236068 (KB955536), Windows Server 2008 R2, Windows Server 2008 R2 SP1.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=10&amp;lang=en</rphURL>
+      <resultID>#tr.10.3</resultID>
+    </testCase>
+    <testCase id="#test.36" type="normal">
+      <title lang="en">Microsoft Excel Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>Excel14_x86_SP0_KB2405840_TRDInstalled</value>
+      <description lang="en">Excel 2010 32-bit + KB2405840</description>
+      <recommendation lang="en-US">Recommended: Excel 2003 SP3 + KB907417, Excel 2007 SP2 + KB968863, or Excel 2010 32-bit + KB2405840</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=36&amp;lang=en</rphURL>
+      <resultID>#tr.36.excel.2010_SP0.x86.KB2405840.trd</resultID>
+    </testCase>
+    <testCase id="#test.21" type="normal">
+      <title lang="en">Operating System Language:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>info</valid>
+      <value>1033</value>
+      <description lang="en">English, United States (1033) </description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=21&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.110" type="normal">
+      <title lang="en">Visual Basic for Applications:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>7</value>
+      <description lang="en">Version: 7.0</description>
+      <recommendation lang="en-US">Supported VBA versions are 6.4, 6.5, 7.0 (32-bit) and 7.1 (32-bit)</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=110&amp;lang=en</rphURL>
+      <resultID>#tr.rstplugin.prerequisites.vba.valid.110.1</resultID>
+    </testCase>
+    <testCase id="#test.7" type="normal">
+      <title lang="en">MSI Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>5.0.7601.17514</value>
+      <description lang="en">MSI 5.0</description>
+      <recommendation lang="en-US">Required: MSI 3.1 or higher.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=7&amp;lang=en</rphURL>
+      <resultID>#tr.7.MSI.5.0</resultID>
+    </testCase>
+    <testCase id="#test.8" type="normal">
+      <title lang="en">MSXML 3.0 Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>8.110.7601.17514</value>
+      <description lang="en">MSXML 3.0 SP10 or higher</description>
+      <recommendation lang="en-US">Required: MSXML 3.0 SP1 or higher.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=8&amp;lang=en</rphURL>
+      <resultID>#tr.8.MSXML.3.0.SP10</resultID>
+    </testCase>
+    <testCase id="#test.19" type="normal">
+      <title lang="en">MSXML 6.0 Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>6.30.7601.17514</value>
+      <description lang="en">6.30.7601.17514</description>
+      <recommendation lang="en-US">Required: MSXML 6.0 or higher.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=19&amp;lang=en</rphURL>
+      <resultID>#tr.19.MSXML.6.0</resultID>
+    </testCase>
+    <testCase id="#test.11" type="normal">
+      <title lang="en">Browser Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>IE8_TRDInstalled</value>
+      <description lang="en">Internet Explorer 8.</description>
+      <recommendation lang="en-US">Required: Internet Explorer 6 SP2 (or higher SP) + KB975736, Internet Explorer 7 + KB975736, Internet Explorer 8, Internet Explorer 9, or Internet Explorer 10.</recommendation>
+      <orecommendation lang="en-US">TESTMSG_DEFAULT_RECOMMENDATION_TEST_11</orecommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=11&amp;lang=en</rphURL>
+      <resultID>#tr.11.IE8.trd</resultID>
+    </testCase>
+    <testCase id="#test.124" type="normal">
+      <title lang="en">Temporary Internet Files folder size:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>51200</value>
+      <description lang="en">50 MB</description>
+      <recommendation lang="en-US">Required: Temporary Internet Files folder size must be at least 50 MB</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=124&amp;lang=en</rphURL>
+      <resultID>#tr.124.IETempPass</resultID>
+    </testCase>
+    <testCase id="#test.125" type="normal">
+      <title lang="en">Internet Availability Test:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>info</valid>
+      <value>200</value>
+      <description lang="en">Internet accessible</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=125&amp;lang=en</rphURL>
+      <resultID>#tr.125.available</resultID>
+    </testCase>
+    <testCase id="#test.133" type="normal">
+      <title lang="en">IE LAN Settings:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>no_yes_no</value>
+      <description lang="en">Automatic configuration script is enabled.</description>
+      <recommendation lang="en-US">Web Proxy Auto-Discovery must be disabled to allow end-user machines to download updates. Auto configuration script and proxy server setting should not be enabled simultaneously.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=133&amp;lang=en</rphURL>
+      <resultID>#tr.133.autoconfigscript</resultID>
+    </testCase>
+    <testCase id="#test.135" type="normal">
+      <title lang="en">Delete Browsing History on Exit:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>disabled</value>
+      <description lang="en">Disabled</description>
+      <recommendation lang="en-US">Internet Explorer setting: Delete Browsing History on Exit must be disabled.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=135&amp;lang=en</rphURL>
+      <resultID>#tr.135.disabled</resultID>
+    </testCase>
+    <testCase id="#test.37" type="normal">
+      <title lang="en">Browser JavaScript:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>0, 0, 0</value>
+      <description lang="en">Enabled.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=37&amp;lang=en</rphURL>
+      <resultID>#tr.37.default</resultID>
+    </testCase>
+    <testCase id="#test.87" type="normal">
+      <title lang="en">HTTP 1.1:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>Enabled</value>
+      <description lang="en">Enabled.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=87&amp;lang=en</rphURL>
+      <resultID>#tr.87.2</resultID>
+    </testCase>
+    <testCase id="#test.88" type="normal">
+      <title lang="en">HTTP 1.1 Through Proxy Connections:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>Enabled</value>
+      <description lang="en">Enabled.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=88&amp;lang=en</rphURL>
+      <resultID>#tr.88.2</resultID>
+    </testCase>
+    <testCase id="#test.121" type="normal">
+      <title lang="en">HTTPS Connection Check:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>success</value>
+      <description lang="en">Successful</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=121&amp;lang=en</rphURL>
+      <resultID>#tr.121.success</resultID>
+    </testCase>
+    <testCase id="#test.86" type="normal">
+      <title lang="en">Saving Encrypted Pages to Disk:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>0</value>
+      <description lang="en">SSL pages are cached.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=86&amp;lang=en</rphURL>
+      <resultID>#tr.86.1</resultID>
+    </testCase>
+    <testCase id="#test.90" type="normal">
+      <title lang="en">Flash Plug-In Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>warning</valid>
+      <value>Flash Plugin is not installed.</value>
+      <description lang="en">Flash plug-in is not installed.</description>
+      <recommendation lang="en-US">Required version: Adobe Flash Player 9.0.115 or higher + Adobe Connect Add-In, or Adobe Flash Player 10.1 or higher.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=90&amp;lang=en</rphURL>
+      <resultID>#tr.90.NotInstalled</resultID>
+    </testCase>
+    <testCase id="#test.99" type="normal">
+      <title lang="en">Silverlight Plugin Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>info</valid>
+      <description lang="en">Silverlight plug-in is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=99&amp;lang=en</rphURL>
+      <resultID>#tr.99.1</resultID>
+    </testCase>
+    <testCase id="#test.78" type="normal">
+      <title lang="en">Legacy Thomson Reuters Products:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>0</value>
+      <description lang="en">No previous versions found.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=78&amp;lang=en</rphURL>
+      <resultID>#tr.business.rstplugin.information.noprevious</resultID>
+    </testCase>
+    <testCase id="#test.123" type="normal">
+      <title lang="en">Update Proxy Connection Check:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>succeeded_configuration</value>
+      <description lang="en">Successfully connected to https://amers1.update.cp.icp2.mpp.reutest.com/ from the product configuration.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=123&amp;lang=en</rphURL>
+      <resultID>#tr.123.success.configuration</resultID>
+    </testCase>
+    <testCase id="#test.17" type="normal">
+      <title lang="en">.NET Framework Version:</title>
+      <group>#group.prerequisites.software</group>
+      <valid>pass</valid>
+      <value>2.0 SP2 , 3.0 SP2 , 3.5 SP1 , 4.0 Full</value>
+      <description lang="en">.NET Framework 2.0 SP2 , 3.0 SP2 , 3.5 SP1 , 4.0 Full</description>
+      <recommendation lang="en-US">Required: .NET Framework 4.0 or above</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=17&amp;lang=en</rphURL>
+      <resultID>#tr.17.dotnet4</resultID>
+    </testCase>
+    <testCase id="#test.1" type="normal">
+      <title lang="en">CPU Type:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>info</valid>
+      <value>x64 Family 6 Model 44 Stepping 2</value>
+      <description lang="en">x64 Family 6 Model 44 Stepping 2</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=1&amp;lang=en</rphURL>
+      <resultID>#tr.2.default</resultID>
+    </testCase>
+    <testCase id="#test.2" type="normal">
+      <title lang="en">CPU Vendor:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>info</valid>
+      <value>GenuineIntel</value>
+      <description lang="en">GenuineIntel</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=2&amp;lang=en</rphURL>
+      <resultID>#tr.2.default</resultID>
+    </testCase>
+    <testCase id="#test.48" type="normal">
+      <title lang="en">CPU Description:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>info</valid>
+      <value>Intel(R) Xeon(R) CPU           X5670  @ 2.93GHz</value>
+      <description lang="en">Intel(R) Xeon(R) CPU           X5670  @ 2.93GHz</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=48&amp;lang=en</rphURL>
+      <resultID>#tr.48.default</resultID>
+    </testCase>
+    <testCase id="#test.3" type="normal">
+      <title lang="en">CPU Speed:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>info</valid>
+      <value>2933</value>
+      <description lang="en">2.9 GHz</description>
+      <recommendation lang="en-US">Recommended CPU Speed is 2.4 GHz</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=3&amp;lang=en</rphURL>
+      <resultID>#tr.3.cpu_speed_ok</resultID>
+    </testCase>
+    <testCase id="#test.4" type="normal">
+      <title lang="en">Physical Memory:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>alert</valid>
+      <value>2147483648;2147016704</value>
+      <description lang="en">2 GB (usable 2.0 GB)</description>
+      <recommendation lang="en-US">Thomson Reuters Eikon may not perform as expected with less than 4GB of RAM.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=4&amp;lang=en</rphURL>
+      <resultID>#tr.4.over.1G</resultID>
+    </testCase>
+    <testCase id="#test.5" type="normal">
+      <title lang="en">Screen Resolution:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>pass</valid>
+      <value>1024x768</value>
+      <recommendation lang="en-US">Minimum supported: 1024 x 768</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=5&amp;lang=en</rphURL>
+      <resultID>#tr.5.1</resultID>
+    </testCase>
+    <testCase id="#test.6" type="normal">
+      <title lang="en">Color Depth:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>pass</valid>
+      <value>32</value>
+      <description lang="en">32 bits.</description>
+      <recommendation lang="en-US">Minimum color depth: 16-bit</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=6&amp;lang=en</rphURL>
+      <resultID>#tr.6.color_depth_ok</resultID>
+    </testCase>
+    <testCase id="#test.39" type="normal">
+      <title lang="en">Free Disk Space:</title>
+      <group>#group.prerequisites.hardware</group>
+      <valid>pass</valid>
+      <value>3</value>
+      <description lang="en">Drive C: has 9.33 GB of free space.</description>
+      <recommendation lang="en-US">Recommended free disk space is 200 MB.</recommendation>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=39&amp;lang=en</rphURL>
+      <resultID>#tr.39.3</resultID>
+    </testCase>
+    <testCase id="#test.24" type="normal">
+      <title lang="en">Computer Name:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>VM03-W7HPMSP1X8</value>
+      <description lang="en">VM03-W7HPMSP1X8</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=24&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.25" type="normal">
+      <title lang="en">Computer Domain:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>WORKGROUP</value>
+      <description lang="en">WORKGROUP</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=25&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.22" type="normal">
+      <title lang="en">Windows User Account Name:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>VM03-W7HPmSP1x86Eng</value>
+      <description lang="en">VM03-W7HPmSP1x86Eng</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=22&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.26" type="normal">
+      <title lang="en">User Rights:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>vista-admin</value>
+      <description lang="en">Administrator account (restricted).</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=26&amp;lang=en</rphURL>
+      <resultID>#tr.26.5</resultID>
+    </testCase>
+    <testCase id="#test.27" type="normal">
+      <title lang="en">User Time Zone:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>(GMT +7) SE Asia Standard Time</value>
+      <description lang="en">(GMT +7) SE Asia Standard Time</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=27&amp;lang=en</rphURL>
+      <resultID>#tr.27.info</resultID>
+    </testCase>
+    <testCase id="#test.73" type="normal">
+      <title lang="en">Local Time:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>13:59</value>
+      <description lang="en">13:59</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=73&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.23" type="normal">
+      <title lang="en">User Locale:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>en-US</value>
+      <description lang="en">en-US</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=23&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.29" type="normal">
+      <title lang="en">Excel Language:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>1033</value>
+      <description lang="en">English, United States (1033) </description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=29&amp;lang=en</rphURL>
+      <resultID>#tr.29.valid</resultID>
+    </testCase>
+    <testCase id="#test.28" type="normal">
+      <title lang="en">Thin Client Run Mode:</title>
+      <group>#group.information.system</group>
+      <valid>info</valid>
+      <value>0</value>
+      <description lang="en">Running locally.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=28&amp;lang=en</rphURL>
+      <resultID>#tr.28.1</resultID>
+    </testCase>
+    <testCase id="#test.62" type="normal">
+      <title lang="en">Product Name:</title>
+      <group>#group.product-information</group>
+      <valid>info</valid>
+      <value>Thomson Reuters Eikon</value>
+      <description lang="en">Thomson Reuters Eikon</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=62&amp;lang=en</rphURL>
+      <resultID>#tr.62</resultID>
+    </testCase>
+    <testCase id="#test.130" type="normal">
+      <title lang="en">Product MSI Version:</title>
+      <group>#group.product-information</group>
+      <valid>info</valid>
+      <value>8.3.00503</value>
+      <description lang="en">8.3.00503</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=130&amp;lang=en</rphURL>
+      <resultID>#tr.130.default</resultID>
+    </testCase>
+    <testCase id="#test.128" type="normal">
+      <title lang="en">Product Version:</title>
+      <group>#group.product-information</group>
+      <valid>info</valid>
+      <value>Desktop 3.3</value>
+      <description lang="en">Desktop 3.3</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=128&amp;lang=en</rphURL>
+      <resultID>#tr.128.default</resultID>
+    </testCase>
+    <testCase id="#test.127" type="normal">
+      <title lang="en">Product ID String:</title>
+      <group>#group.product-information</group>
+      <valid>info</valid>
+      <value>NET40,EIKON8.3.503,SR0,UA12.1.34,ADF6.20132.5.31</value>
+      <description lang="en">NET40,EIKON8.3.503,SR0,UA12.1.34,ADF6.20132.5.31</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=127&amp;lang=en</rphURL>
+      <resultID>#tr.127.default</resultID>
+    </testCase>
+    <testCase id="#test.129" type="normal">
+      <title lang="en">Machine ID:</title>
+      <group>#group.product-information</group>
+      <valid>info</valid>
+      <value>59CE35A5-2E38-53FD-1AC0-7B9D2114F6C7</value>
+      <description lang="en">59CE35A5-2E38-53FD-1AC0-7B9D2114F6C7</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=129&amp;lang=en</rphURL>
+      <resultID>#tr.129.default</resultID>
+    </testCase>
+    <testCase id="#test.122" type="normal">
+      <title lang="en">User Country:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>Bangkok</value>
+      <description lang="en">Bangkok</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=122&amp;lang=en</rphURL>
+      <resultID>#tr.122.user_country</resultID>
+    </testCase>
+    <testCase id="#test.61" type="normal">
+      <title lang="en">User ID:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>panyapon.saeliw@thomsonreuters.com</value>
+      <description lang="en">panyapon.saeliw@thomsonreuters.com</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=61&amp;lang=en</rphURL>
+      <resultID>#tr.61.2</resultID>
+    </testCase>
+    <testCase id="#test.49" type="normal">
+      <title lang="en">Installation Path:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>C:\Program Files\Thomson Reuters\TRD 6</value>
+      <description lang="en">C:\Program Files\Thomson Reuters\TRD 6</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=49&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.63" type="normal">
+      <title lang="en">OMM Session:</title>
+      <group>#group.information.rde</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=63&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.77" type="normal">
+      <title lang="en">Market Feed Session:</title>
+      <group>#group.information.rde</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=77&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.64" type="normal">
+      <title lang="en">Display Template Path:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>C:\Program Files\Thomson Reuters\TRD 6\Config\RealTime</value>
+      <description lang="en">C:\Program Files\Thomson Reuters\TRD 6\Config\RealTime</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=64&amp;lang=en</rphURL>
+      <resultID>#error.business.no_test_result</resultID>
+    </testCase>
+    <testCase id="#test.65" type="normal">
+      <title lang="en">DACS User Name:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>VM03-W7HPmSP1x86Eng</value>
+      <description lang="en">VM03-W7HPmSP1x86Eng</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=65&amp;lang=en</rphURL>
+      <resultID>#tr.65.2</resultID>
+    </testCase>
+    <testCase id="#test.66" type="normal">
+      <title lang="en">DACS Position:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>0.0.0.0/PAXTRA-1914121085</value>
+      <description lang="en">0.0.0.0/PAXTRA-1914121085</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=66&amp;lang=en</rphURL>
+      <resultID>#tr.66.2</resultID>
+    </testCase>
+    <testCase id="#test.79" type="normal">
+      <title lang="en">Public API Installation Status:</title>
+      <group>#group.information.rde</group>
+      <valid>info</valid>
+      <value>msiInstallStateAbsent</value>
+      <description lang="en">The feature is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=79&amp;lang=en</rphURL>
+      <resultID>#tr.79.5</resultID>
+    </testCase>
+    <testCase id="#test.32" type="normal">
+      <title lang="en">Update Service Agent:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>12.1.100.32512</value>
+      <description lang="en">Version 12.1.100.32512</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=32&amp;lang=en</rphURL>
+      <resultID>#tr.32.2</resultID>
+    </testCase>
+    <testCase id="#test.71" type="normal">
+      <title lang="en">Desktop Scheduler Setting for Updates:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>false</value>
+      <description lang="en">Download critical and important updates.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=71&amp;lang=en</rphURL>
+      <resultID>#tr.71.2</resultID>
+    </testCase>
+    <testCase id="#test.67" type="normal">
+      <title lang="en">Desktop Scheduler Settings:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>4</value>
+      <description lang="en"> Every 7 days at 4:00 AM</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=67&amp;lang=en</rphURL>
+      <resultID>#tr.update-schedule.daysinterval</resultID>
+    </testCase>
+    <testCase id="#test.69" type="normal">
+      <title lang="en">Desktop Scheduler Last Check for Updates:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>none</value>
+      <description lang="en">Never.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=69&amp;lang=en</rphURL>
+      <resultID>#tr.69.1</resultID>
+    </testCase>
+    <testCase id="#test.72" type="normal">
+      <title lang="en">Update Agent Setting for Updates:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>rusServiceNotInstalled</value>
+      <description lang="en">Update Agent is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=72&amp;lang=en</rphURL>
+      <resultID>#tr.rus-service.not-installed</resultID>
+    </testCase>
+    <testCase id="#test.35" type="normal">
+      <title lang="en">Update Agent State:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>rusServiceNotInstalled</value>
+      <description lang="en">Update Agent is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=35&amp;lang=en</rphURL>
+      <resultID>#tr.rus-service.not-installed</resultID>
+    </testCase>
+    <testCase id="#test.68" type="normal">
+      <title lang="en">Update Agent Check Time:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>rusServiceNotInstalled</value>
+      <description lang="en">Update Agent is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=68&amp;lang=en</rphURL>
+      <resultID>#tr.rus-service.not-installed</resultID>
+    </testCase>
+    <testCase id="#test.70" type="normal">
+      <title lang="en">Update Agent Last Check for Updates:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>rusServiceNotInstalled</value>
+      <description lang="en">Update Agent is not installed.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=70&amp;lang=en</rphURL>
+      <resultID>#tr.rus-service.not-installed</resultID>
+    </testCase>
+    <testCase id="#test.131" type="normal">
+      <title lang="en">Update Agent Latest Status:</title>
+      <group>#group.updates</group>
+      <valid>info</valid>
+      <value>NO</value>
+      <description lang="en">No Pending Updates Detected.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=131&amp;lang=en</rphURL>
+      <resultID>#tr.72.NO</resultID>
+    </testCase>
+    <testCase id="#test.42" type="normal">
+      <title lang="en">News Headlines Streaming:</title>
+      <group>#group.network.news</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=42&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.31" type="normal">
+      <title lang="en">Views Service:</title>
+      <group>#group.serviceAvailability</group>
+      <valid>pass</valid>
+      <value>200</value>
+      <description lang="en">Accessible.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=31&amp;lang=en</rphURL>
+      <resultID>#tr.31.1</resultID>
+      <measurement unit="ms">890</measurement>
+    </testCase>
+    <testCase id="#test.1003" type="normal">
+      <title lang="en">Search and Navigation Services:</title>
+      <group>#group.serviceAvailability</group>
+      <valid>pass</valid>
+      <value>200</value>
+      <description lang="en">Accessible.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=1003&amp;lang=en</rphURL>
+      <resultID>#tr.1003.1</resultID>
+    </testCase>
+    <testCase id="#test.1001" type="normal">
+      <title lang="en">Gateway Service:</title>
+      <group>#group.serviceAvailability</group>
+      <valid>pass</valid>
+      <value>1.26.124.0</value>
+      <description lang="en">Accessible.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=1001&amp;lang=en</rphURL>
+      <resultID>#tr.1001.1</resultID>
+    </testCase>
+    <testCase id="#test.92" type="normal">
+      <title lang="en">Platform Connection Check:</title>
+      <group>#group.serviceAvailability</group>
+      <valid>pass</valid>
+      <value>200</value>
+      <description lang="en">Pass.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=92&amp;lang=en</rphURL>
+      <resultID>#tr.92.2</resultID>
+    </testCase>
+    <testCase id="#test.18" type="normal">
+      <title lang="en">HTTP 1.1 Service Availability:</title>
+      <group>#group.webservices</group>
+      <valid>warning</valid>
+      <value>-1</value>
+      <description lang="en">Not available.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=18&amp;lang=en</rphURL>
+      <resultID>#tr.18.2</resultID>
+    </testCase>
+    <testCase id="#test.40" type="normal">
+      <title lang="en">Streaming Availability:</title>
+      <group>#group.realtime</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=40&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.111" type="normal">
+      <title lang="en">IDN Permission Uploader:</title>
+      <group>#group.realtime</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=111&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.93" type="normal">
+      <title lang="en">Current Real-time Deployment Model:</title>
+      <group>#group.realtime</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=93&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.94" type="normal">
+      <title lang="en">Current Real-time Network:</title>
+      <group>#group.realtime</group>
+      <valid>info</valid>
+      <value>INTERNET</value>
+      <description lang="en">Internet delivery.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=94&amp;lang=en</rphURL>
+      <resultID>#tr.94.2</resultID>
+    </testCase>
+    <testCase id="#test.95" type="normal">
+      <title lang="en">Download Bandwidth:</title>
+      <group>#group.networking.connected</group>
+      <valid>warning</valid>
+      <value>50000</value>
+      <description lang="en">50000 bps</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=95&amp;lang=en</rphURL>
+      <resultID>#tr.95.0</resultID>
+    </testCase>
+    <testCase id="#test.96" type="normal">
+      <title lang="en">Upload Bandwidth:</title>
+      <group>#group.networking.connected</group>
+      <valid>warning</valid>
+      <value>60000</value>
+      <description lang="en">60000 bps</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=96&amp;lang=en</rphURL>
+      <resultID>#tr.96.0</resultID>
+    </testCase>
+    <testCase id="#test.112" type="normal">
+      <title lang="en">Average Latency (One Way):</title>
+      <group>#group.networking.connected</group>
+      <valid>warning</valid>
+      <value>10</value>
+      <description lang="en">10 ms</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=112&amp;lang=en</rphURL>
+      <resultID>#tr.112.0</resultID>
+    </testCase>
+    <testCase id="#test.120" type="normal">
+      <title lang="en">Platform Name:</title>
+      <group>#group.networking.connected</group>
+      <valid>info</valid>
+      <value>amers1</value>
+      <description lang="en">amers1</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=120&amp;lang=en</rphURL>
+      <resultID>#tr.120.platformname</resultID>
+    </testCase>
+    <testCase id="#test.50" type="normal">
+      <title lang="en">Data Retrieval:</title>
+      <group>#group.dex2</group>
+      <valid>pass</valid>
+      <value>1</value>
+      <description lang="en">Pass with RIC 2284.T</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=50&amp;lang=en</rphURL>
+      <resultID>#tr.test.dex2.pass</resultID>
+    </testCase>
+    <testCase id="#test.59" type="normal">
+      <title lang="en">Time Series Snapshot Availability:</title>
+      <group>#group.tsi</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=59&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+    <testCase id="#test.60" type="normal">
+      <title lang="en">Time Series Streaming Availability:</title>
+      <group>#group.tsi</group>
+      <valid>alert</valid>
+      <description lang="en">Failed to initialize real-time service.</description>
+      <rphURL>cpurl://customers./rph/instl/sliver.aspx?topic=60&amp;lang=en</rphURL>
+      <resultID>#error.system.plugin.realtimefailure</resultID>
+    </testCase>
+  </testCases>
+</rstResult>
